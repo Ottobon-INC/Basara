@@ -1,0 +1,47 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.25rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: var(--transition);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Variants */
+.btn-primary {
+  background-color: var(--color-accent);
+  color: #ffffff !important;
+  border: 2px solid var(--color-accent);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--color-accent) !important;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-primary) !important;
+  border: 2px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary);
+  color: #ffffff !important;
+}
+
+/* Theme border radius support */
+.theme-umbrella { border-radius: var(--radius-umbrella); }
+.theme-school { border-radius: var(--radius-school); }
+.theme-jc { border-radius: var(--radius-jc); }
+.theme-da { 
+  border-radius: var(--radius-da); 
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+.theme-degree { border-radius: var(--radius-umbrella); }

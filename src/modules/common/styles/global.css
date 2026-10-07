@@ -1,0 +1,73 @@
+/* ==========================================================================
+   REACT DESIGN SYSTEM - GLOBAL RULES & ACCESSIBILITY
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ------------------------------------------------------------------------
+   REDUCED MOTION SUPPORT (Accessibility)
+   ------------------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------------------------------------------------------------
+   FOCUS STATES (Accessibility)
+   ------------------------------------------------------------------------ */
+a:focus-visible, 
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+/* ------------------------------------------------------------------------
+   GLOBAL UTILITIES
+   ------------------------------------------------------------------------ */
+.sb-container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.sb-section-padding {
+  padding: var(--spacing-xl) 0;
+}
+
+.sb-bg-surface {
+  background-color: var(--color-surface);
+}
+
+.sb-bg-white {
+  background-color: var(--color-white);
+}
+
+.sb-bg-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}

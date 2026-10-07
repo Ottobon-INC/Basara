@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.chairman-section {
+  padding: 5vh 0;
+  background: #fcfdfe; /* Clean, minimal off-white */
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  min-height: calc(100vh - 80px); 
+  display: flex;
+  align-items: center;
+}
+
+.chairman-bg-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.06; /* Much more subtle */
+  z-index: 0;
+  pointer-events: none;
+  mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+}
+
+.chairman-cursive-bg {
+  position: absolute;
+  font-family: 'Great Vibes', cursive;
+  color: #3f63c6;
+  font-size: clamp(2.5rem, 4.5vh, 3.5rem);
+  line-height: 1.1;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  white-space: nowrap;
+}
+
+/* Elegant custom underline instead of text-decoration */
+.chairman-cursive-bg::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 10%;
+  width: 80%;
+  height: 1.5px;
+  background: rgba(63, 99, 198, 0.4);
+  transform: rotate(-2deg);
+}
+
+.chairman-cursive-bg.top-left {
+  top: 8%;
+  left: 2%;
+  transform: rotate(-12deg);
+}
+
+.chairman-cursive-bg.top-right {
+  top: 5%;
+  right: 2%;
+  transform: rotate(-12deg);
+}
+
+.chairman-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr; /* Give text slightly more breathing room */
+  gap: clamp(2rem, 4vw, 4rem);
+  position: relative;
+  z-index: 1;
+  align-items: center;
+  height: 100%;
+  padding: 2vh 0;
+}
+
+/* ──────────────── Left Column ──────────────── */
+.chairman-left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.chairman-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: min(420px, 48vh);
+  display: flex;
+  justify-content: center;
+}
+
+.chairman-image-circle {
+  position: absolute;
+  top: 2%;
+  left: -2%;
+  width: 104%;
+  height: 96%;
+  background: #f0f4fc; /* Clean, solid light blue circle instead of weird gradient */
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.chairman-photo {
+  width: 90%;
+  height: auto;
+  max-height: 45vh;
+  object-fit: cover;
+  border-radius: 50% 50% 0 0;
+  display: block;
+}
+
+.chairman-card-group {
+  width: 92%;
+  margin-top: -3vh;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 20px 50px rgba(13, 30, 76, 0.08); /* Professional, deep, soft shadow */
+  border-radius: 12px;
+}
+
+.chairman-profile-card {
+  background: #ffffff;
+  border-radius: 12px 12px 0 0;
+  padding: clamp(1.25rem, 2.5vh, 2rem);
+}
+
+.chairman-name {
+  font-family: 'Lora', serif;
+  font-size: clamp(1.2rem, 2.2vh, 1.4rem);
+  font-weight: 700;
+  color: #0d1e4c;
+  margin-bottom: 0.2rem;
+}
+
+.chairman-title {
+  font-size: clamp(0.75rem, 1.3vh, 0.85rem);
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: clamp(0.75rem, 1.5vh, 1.25rem);
+}
+
+.chairman-signature {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(1.8rem, 3.5vh, 2.2rem);
+  color: #0d1e4c;
+  margin-bottom: clamp(0.75rem, 1.5vh, 1.25rem);
+}
+
+.chairman-motto {
+  font-size: clamp(0.65rem, 1.2vh, 0.75rem);
+  font-weight: 600;
+  color: #555;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.chairman-quote-box {
+  background: #0d1e4c;
+  color: #ffffff;
+  padding: clamp(1.5rem, 3vh, 2rem) clamp(1.5rem, 3vh, 2.5rem);
+  border-radius: 0 0 12px 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.chairman-quote-box p {
+  font-family: 'Lora', serif;
+  font-size: clamp(0.9rem, 1.6vh, 1.05rem);
+  font-style: italic;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.quote-marks {
+  font-family: 'Lora', serif;
+  font-size: clamp(3rem, 6vh, 5rem);
+  color: rgba(255, 255, 255, 0.08);
+  position: absolute;
+  line-height: 1;
+}
+
+.quote-marks.top-left {
+  top: 5px;
+  left: 15px;
+}
+
+.quote-marks.bottom-right {
+  bottom: -25px;
+  right: 15px;
+}
+
+
+/* ──────────────── Right Column ──────────────── */
+.chairman-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.chairman-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f0f4fc; /* Clean solid background */
+  color: #3f63c6;
+  padding: 0.5rem 1.25rem;
+  border-radius: 30px;
+  font-size: clamp(0.65rem, 1.2vh, 0.75rem);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: clamp(0.75rem, 2vh, 1.25rem);
+  text-transform: uppercase;
+  width: max-content;
+}
+
+.chairman-badge svg {
+  width: 14px;
+  height: 14px;
+}
+
+.chairman-heading {
+  font-family: 'Lora', serif;
+  font-size: clamp(2.2rem, 4.5vh, 3.2rem);
+  font-weight: 700;
+  color: #0d1e4c;
+  line-height: 1.15;
+  margin-bottom: clamp(0.75rem, 2vh, 1.25rem);
+  position: relative;
+  z-index: 2;
+  letter-spacing: -0.02em;
+}
+
+.chairman-accent {
+  width: 60px;
+  height: 4px;
+  background: #3f63c6;
+  border-radius: 2px;
+  margin-bottom: clamp(0.75rem, 2vh, 1.5rem);
+}
+
+.chairman-intro-text p {
+  font-size: clamp(0.85rem, 1.6vh, 1rem);
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: clamp(0.75rem, 1.5vh, 1.25rem);
+}
+
+.chairman-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1rem, 2vw, 1.5rem);
+  margin-top: clamp(1.5rem, 3vh, 2rem);
+}
+
+.chairman-content-card {
+  background: #ffffff;
+  border: 1px solid rgba(13, 30, 76, 0.05); /* Very subtle border */
+  border-radius: 16px; /* Slightly softer corners */
+  padding: clamp(1rem, 2vh, 1.5rem);
+  box-shadow: 0 4px 20px rgba(13, 30, 76, 0.03); /* Soft, premium shadow */
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.chairman-content-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(13, 30, 76, 0.08);
+  border-color: rgba(63, 99, 198, 0.15);
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: clamp(0.75rem, 1.5vh, 1.25rem);
+}
+
+.card-icon {
+  width: clamp(32px, 5vh, 44px);
+  height: clamp(32px, 5vh, 44px);
+  flex-shrink: 0;
+  background: #f0f4fc; /* Clean solid background */
+  color: #3f63c6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-icon svg {
+  width: clamp(16px, 2.5vh, 20px);
+  height: clamp(16px, 2.5vh, 20px);
+}
+
+.card-title-group {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.card-title-group h4 {
+  font-family: 'Lora', serif;
+  font-size: clamp(0.95rem, 1.8vh, 1.15rem);
+  font-weight: 700;
+  color: #0d1e4c;
+  margin-bottom: 0.3rem;
+  white-space: nowrap;
+}
+
+.card-title-accent {
+  width: 30px;
+  height: 3px;
+  background: #3f63c6;
+  border-radius: 1.5px;
+}
+
+.card-body p {
+  font-size: clamp(0.75rem, 1.4vh, 0.875rem);
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.card-body p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ──────────────── Responsive ──────────────── */
+@media (max-width: 1100px) {
+  .chairman-section {
+    height: auto;
+    min-height: calc(100vh - 80px);
+    padding: 4rem 0;
+  }
+  .chairman-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    height: auto;
+  }
+  
+  .chairman-left {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .chairman-cursive-bg.top-left {
+    left: 2%;
+  }
+}
+
+@media (max-width: 768px) {
+  .chairman-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

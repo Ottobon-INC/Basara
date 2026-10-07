@@ -1,0 +1,59 @@
+/* ==========================================================================
+   REACT DESIGN SYSTEM - GLOBAL TOKENS
+   Source of Truth: Existing Sri Basara Vanilla CSS (Root, School, JC, DA)
+   ========================================================================== */
+
+:root {
+  /* ------------------------------------------------------------------------
+     COLORS (Unified across institutions)
+     ------------------------------------------------------------------------ */
+  --color-primary: #0A1D37;      /* Primary institutional dark (Navy) */
+  --color-accent: #C71F24;       /* Academic accent (Crimson) */
+  
+  --color-white: #FFFFFF;        /* Pure white */
+  --color-background: #FAFAF8;   /* Primary background (Warm White) */
+  --color-surface: #F4F5F7;      /* Soft surface for cards/sections */
+  
+  --color-text: #334155;         /* Body text (School/Root variant) */
+  --color-text-strict: #1E293B;  /* Stricter body text (Defense Academy variant) */
+  --color-muted: #64748B;        /* Subtext */
+  
+  --color-border: #E2E8F0;       /* Structural borders */
+
+  /* ------------------------------------------------------------------------
+     TYPOGRAPHY
+     ------------------------------------------------------------------------ */
+  --font-heading: 'Merriweather', serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* ------------------------------------------------------------------------
+     SPACING SYSTEM
+     ------------------------------------------------------------------------ */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
+  --spacing-xxl: 8rem;
+
+  /* ------------------------------------------------------------------------
+     LAYOUT & CONTAINERS
+     ------------------------------------------------------------------------ */
+  --container-width: 1200px;
+
+  /* ------------------------------------------------------------------------
+     INSTITUTION-SPECIFIC CONFLICTS PRESERVED
+     Conflict Note: Border radiuses varied intentionally per institution
+     to reflect their specific aesthetic (warm vs disciplined).
+     ------------------------------------------------------------------------ */
+  --radius-school: 6px;
+  --radius-jc: 4px;
+  --radius-da: 2px;
+  --radius-umbrella: 6px;
+
+  /* ------------------------------------------------------------------------
+     UTILITIES
+     ------------------------------------------------------------------------ */
+  --transition: all 0.3s ease;
+  --transition-fast: all 0.2s ease-in-out; /* Used by DA */
+}

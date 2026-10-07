@@ -1,0 +1,228 @@
+/* Shared styles for School, Junior College, and Defense Academy home pages */
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.trust-content .eyebrow {
+    display: inline-block;
+    color: var(--color-crimson);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.trust-content h2 {
+    color: var(--color-navy);
+    margin-bottom: 1.5rem;
+    line-height: 1.25;
+}
+
+.trust-content p {
+    color: var(--color-text);
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+.trust-panel {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 2.5rem;
+}
+
+.trust-panel-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.trust-panel-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.trust-panel-label {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+}
+
+.trust-panel-value {
+    font-size: 1.125rem;
+    font-family: var(--font-heading);
+    color: var(--color-navy);
+}
+
+.trust-panel-value a {
+    color: var(--color-navy);
+}
+
+.trust-panel-value a:hover {
+    color: var(--color-crimson);
+}
+
+/* Admissions Enquiry Block */
+.admissions-container {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 4rem;
+    box-shadow: 0 10px 30px rgba(10, 29, 55, 0.04);
+}
+
+.admissions-content h2 {
+    margin-bottom: 1.25rem;
+}
+
+.admissions-content p {
+    color: var(--color-text);
+    margin-bottom: 2.5rem;
+    font-size: 1.125rem;
+}
+
+.contact-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.contact-action-card {
+    padding: 2rem;
+    background: var(--color-surface);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.contact-action-card:hover {
+    border-color: var(--color-crimson);
+    background: var(--color-white);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.contact-action-card i {
+    color: var(--color-crimson);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-action-card h4 {
+    margin-bottom: 0.5rem;
+    font-family: var(--font-body);
+    color: var(--color-navy);
+}
+
+.contact-action-card p {
+    margin-bottom: 0;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+/* Specific to Junior College Info Panel */
+.info-panel {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 2.5rem;
+}
+
+.info-panel-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-panel-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.info-panel-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.item-label {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+}
+
+.item-value {
+    font-size: 1.125rem;
+    font-family: var(--font-heading);
+    color: var(--color-navy);
+}
+
+/* Specific to Defense Academy Cards */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.program-placeholder-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.placeholder-block {
+    text-align: center;
+    padding: 2rem;
+    border: 2px dashed var(--color-border);
+    border-radius: var(--border-radius);
+    background: var(--color-surface);
+}
+.placeholder-block i {
+    font-size: 2.5rem;
+    color: var(--color-border);
+    margin-bottom: 1rem;
+}
+.placeholder-block p {
+    color: var(--color-muted);
+    margin: 0;
+}
+
+@media (max-width: 991px) {
+    .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .admissions-container {
+        padding: 2.5rem 1.5rem;
+    }
+    
+    .contact-actions-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .trust-panel, .info-panel {
+        padding: 1.5rem;
+    }
+}

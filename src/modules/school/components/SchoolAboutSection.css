@@ -1,0 +1,178 @@
+/* ===== School About — Clean Single-Page Layout ===== */
+
+.sa-section {
+  height: calc(100dvh - 132px);
+  display: flex;
+  align-items: center;
+  background: #fff;
+  position: relative;
+}
+
+/* Subtle top border gradient transition from hero */
+.sa-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-accent, #c71f24) 0%, var(--color-primary, #0a1d37) 100%);
+}
+
+.sa-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* ---- Left Column: Heading + Stats ---- */
+
+.sa-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-accent, #c71f24);
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.sa-label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.25rem;
+  height: 2px;
+  background: var(--color-accent, #c71f24);
+}
+
+.sa-heading {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  color: var(--color-primary, #0a1d37);
+  line-height: 1.2;
+  font-weight: 800;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.5px;
+}
+
+.sa-heading-accent {
+  color: var(--color-accent, #c71f24);
+  font-style: italic;
+}
+
+/* Inline stats */
+.sa-stats-inline {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.sa-stat-inline {
+  display: flex;
+  flex-direction: column;
+}
+
+.sa-stat-inline strong {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-primary, #0a1d37);
+  line-height: 1;
+}
+
+.sa-stat-inline span {
+  font-size: 0.75rem;
+  color: var(--color-muted, #888);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+.sa-stat-divider {
+  width: 1px;
+  height: 36px;
+  background: var(--color-border, #e0e0e0);
+}
+
+/* ---- Right Column: Text ---- */
+
+.sa-text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--color-text, #555);
+  margin-bottom: 1.25rem;
+}
+
+.sa-text:last-of-type {
+  margin-bottom: 1.75rem;
+}
+
+.sa-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-accent, #c71f24);
+  text-decoration: none;
+  transition: gap 0.3s ease;
+}
+
+.sa-link:hover {
+  gap: 0.85rem;
+}
+
+/* ---- Scroll Animations ---- */
+
+.sa-animate {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.sa-slide-right {
+  transform: translateX(-30px);
+}
+.sa-slide-right.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sa-slide-left {
+  transform: translateX(30px);
+}
+.sa-slide-left.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sa-delay-2 {
+  transition-delay: 200ms;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 768px) {
+  .sa-section {
+    height: auto;
+    min-height: auto;
+    padding: 3rem 0;
+  }
+  .sa-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .sa-heading {
+    font-size: 1.75rem;
+  }
+}

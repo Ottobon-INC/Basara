@@ -1,0 +1,58 @@
+/* ==========================================================================
+   REACT DESIGN SYSTEM - TYPOGRAPHY
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  line-height: 1.25;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Base typographic scales matching production clamp() formulas */
+h1 { 
+  font-size: clamp(2.5rem, 5vw, 4rem); 
+  font-weight: 700; 
+}
+
+/* Note: Defense Academy overrides h1 weight to 900.
+   This will be handled via a utility class or component prop. */
+.sb-heading-900 { font-weight: 900 !important; }
+
+h2 { 
+  font-size: clamp(2rem, 4vw, 2.75rem); 
+  font-weight: 700; 
+}
+
+h3 { 
+  font-size: clamp(1.5rem, 3vw, 1.75rem); 
+  font-weight: 600; 
+}
+
+h4 { 
+  font-size: 1.25rem; 
+  font-weight: 600; 
+}
+
+p {
+  font-size: 1.125rem; /* Base size derived from School/Root */
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text);
+}
+
+/* Links */
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+/* Form Controls Typography */
+button, input, textarea, select {
+  font-family: var(--font-body);
+  font-size: 1rem;
+}

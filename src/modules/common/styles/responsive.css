@@ -1,0 +1,47 @@
+/* ==========================================================================
+   REACT DESIGN SYSTEM - RESPONSIVE FOUNDATION
+   Based on explicitly requested tested breakpoints.
+   ========================================================================== */
+
+/* 1440px - Large Desktop/XL Screens */
+@media (max-width: 1440px) {
+    /* Fluid typography generally handles scaling below this point */
+}
+
+/* 1100px - Mobile Navigation Breakpoint for Modern Sites */
+@media (max-width: 1100px) {
+    /* Reserved for Header/Navigation toggle component logic */
+}
+
+/* 1024px - Standard Tablet Landscape */
+@media (max-width: 1024px) {
+    /* General structural grid collapse */
+}
+
+/* 991px - Mid-Tablet Breakpoint (Used heavily in Degree/Legacy) */
+@media (max-width: 991px) {
+    /* Component specific logic for cards grids */
+}
+
+/* 768px - Tablet Portrait / Standard Mobile Switch */
+@media (max-width: 768px) {
+    /* Reduce global padding on smaller screens matching production */
+    .sb-section-padding {
+        padding: var(--spacing-lg) 0;
+    }
+}
+
+/* 414px - Large Mobile */
+@media (max-width: 414px) {
+    
+}
+
+/* 375px - Standard Mobile */
+@media (max-width: 375px) {
+    
+}
+
+/* 320px - Minimum Support Mobile */
+@media (max-width: 320px) {
+    
+}

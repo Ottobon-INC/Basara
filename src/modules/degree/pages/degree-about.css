@@ -1,0 +1,235 @@
+/* ==========================================================================
+   REACT DESIGN SYSTEM - DEGREE ABOUT PAGE MIGRATION
+   Migrated from inner-about.css
+   ========================================================================== */
+
+/* 1. Inner Page Hero */
+.inner-hero-section {
+    background-color: var(--color-primary);
+    padding: 80px 5%;
+    text-align: center;
+    border-bottom: 4px solid var(--color-accent);
+}
+
+.inner-hero-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.inner-hero-title {
+    font-family: var(--font-heading);
+    color: var(--color-white);
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* 2. Narrative Section */
+.about-narrative-section {
+    padding: 80px 5%;
+    background-color: var(--color-white);
+}
+
+.about-narrative-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.about-narrative-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-narrative-content h2 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 1.3;
+}
+
+.about-narrative-content p {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+.about-narrative-image {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 20px 20px 0px 0px rgba(10, 29, 55, 0.05);
+}
+
+.about-narrative-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    max-height: 400px;
+}
+
+/* 3. Leadership Section */
+.about-leadership-section {
+    padding: 80px 5%;
+    background-color: var(--color-surface);
+}
+
+.about-leadership-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-leadership-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.about-leadership-header h2 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.about-leadership-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.leadership-card {
+    background-color: var(--color-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 10px 30px rgba(10, 29, 55, 0.05);
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.leadership-image-wrapper {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.leadership-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.leadership-card h3 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.leadership-card p {
+    font-family: var(--font-body);
+    color: var(--color-accent);
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* 4. Initiatives Section */
+.about-initiatives-section {
+    padding: 80px 5%;
+    background-color: var(--color-white);
+}
+
+.about-initiatives-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-initiatives-container h2 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.initiatives-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.initiatives-list li {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 20px 0;
+    border-top: 1px solid var(--color-border);
+    position: relative;
+    padding-left: 36px;
+}
+
+.initiatives-list li:last-child {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.initiatives-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 8px;
+    top: 20px;
+    color: var(--color-accent);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .about-leadership-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+    }
+}
+
+@media (min-width: 992px) {
+    .inner-hero-section {
+        padding: 100px 5%;
+    }
+
+    .inner-hero-title {
+        font-size: 42px;
+    }
+
+    .about-narrative-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 80px;
+    }
+
+    .about-narrative-image img {
+        max-height: 500px;
+    }
+}
+
+@media (max-width: 414px) {
+    .inner-hero-title,
+    .about-narrative-content h2,
+    .about-leadership-header h2,
+    .about-initiatives-container h2 {
+        font-size: 28px;
+    }
+}

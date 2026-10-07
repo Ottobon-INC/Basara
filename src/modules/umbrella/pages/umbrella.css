@@ -1,0 +1,252 @@
+/* ==========================================================================
+   REACT DESIGN SYSTEM - UMBRELLA SPECIFIC STYLES
+   Migrated from institutions.css and root hero.css
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   UMBRELLA HERO (NATIVE IMPLEMENTATION)
+   -------------------------------------------------------------------------- */
+.umbrella-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  background: var(--color-primary);
+  min-height: calc(100dvh - 132px);
+}
+
+/* Solid dark background — visible during the 2s text intro */
+.umbrella-hero-solid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-primary);
+  z-index: 0;
+}
+
+/* Video / image background — fills full width, height follows aspect ratio */
+.umbrella-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.umbrella-hero-bg.visible {
+  opacity: 1;
+}
+
+/* Light overlay on video — subtle since text fades out */
+.umbrella-hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(10, 29, 55, 0.15), rgba(10, 29, 55, 0.25));
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.umbrella-hero-video-overlay.visible {
+  opacity: 1;
+}
+
+.umbrella-hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 800px;
+  color: var(--color-white);
+  padding: 0 1.5rem;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+/* Hide text when video plays */
+.umbrella-hero-content.hero-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.umbrella-hero-tagline {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.umbrella-hero-title {
+  color: var(--color-white);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  margin-bottom: 1.5rem;
+}
+
+.umbrella-hero-description {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   OUR INSTITUTIONS (DIRECTORY)
+   -------------------------------------------------------------------------- */
+.institutions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.institution-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-umbrella);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.institution-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(10, 29, 55, 0.08);
+}
+
+.inst-card-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inst-card-content {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.inst-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.inst-card-desc {
+  color: var(--color-muted);
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.inst-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.inst-card-link:hover {
+  gap: 0.75rem;
+}
+
+.inst-card-placeholder {
+  color: var(--color-muted);
+  cursor: not-allowed;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+}
+
+/* Thematic borders */
+.card-degree { border-top: 4px solid var(--color-accent); }
+.card-junior { border-top: 4px solid #F59E0B; }
+.card-school { border-top: 4px solid #10B981; }
+.card-defence { border-top: 4px solid #3B82F6; }
+
+/* --------------------------------------------------------------------------
+   CAMPUS GALLERY
+   -------------------------------------------------------------------------- */
+.campus-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.campus-img-wrap {
+  position: relative;
+  border-radius: var(--radius-umbrella);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+.campus-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.campus-img-wrap:hover img {
+  transform: scale(1.05);
+}
+
+.campus-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(transparent, rgba(10, 29, 55, 0.9));
+  color: var(--color-white);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .institutions-grid {
+      grid-template-columns: 1fr;
+  }
+  
+  .campus-gallery {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .campus-gallery {
+      grid-template-columns: 1fr;
+  }
+  
+  .inst-card-content {
+      padding: 1.5rem;
+  }
+}

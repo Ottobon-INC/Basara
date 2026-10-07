@@ -1,0 +1,52 @@
+/* ==========================================================================
+   REACT DESIGN SYSTEM - THEMES
+   ========================================================================== */
+
+/* 
+  School Theme (Pencils, Pens, Playful)
+*/
+.theme-school {
+  --color-primary: #1e3a8a; /* A slightly brighter navy for school */
+  --color-accent: #e11d48; /* A brighter crimson/pink for school */
+  --theme-bg-pattern: url('/assets/school/pencil_pattern.jpg');
+}
+
+/* 
+  Junior College Theme (Notebooks, Flasks, Math)
+*/
+.theme-jc {
+  --color-primary: #0f172a; /* Slate dark */
+  --color-accent: #0284c7; /* Academic Blue */
+  --theme-bg-pattern: url('/assets/juniorcollege/jc_pattern.jpg');
+}
+
+/* 
+  Degree College Theme (Books, Diplomas, Professional)
+*/
+.theme-degree {
+  --color-primary: #312e81; /* Deep Indigo */
+  --color-accent: #b45309; /* Bronze/Amber for degree */
+  --theme-bg-pattern: url('/assets/degree/academic_pattern.jpg');
+}
+
+/* 
+  Defense Academy Theme (Camouflage, Disciplined)
+*/
+.theme-defense {
+  --color-primary: #14532d; /* Military Green */
+  --color-accent: #ea580c; /* Orange accent */
+  --theme-bg-pattern: url('/assets/defenseacademy/camo_pattern.jpg');
+}
+
+/* Make AboutTextSection thematic */
+.theme-school .inst-about-text-section,
+.theme-jc .inst-about-text-section,
+.theme-degree .inst-about-text-section,
+.theme-defense .inst-about-text-section {
+  background-image: var(--theme-bg-pattern) !important;
+  background-size: 300px !important;
+  background-repeat: repeat !important;
+  background-color: #fafaf8 !important;
+  background-blend-mode: multiply;
+  position: relative;
+}

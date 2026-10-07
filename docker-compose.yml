@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  basara-react-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: basara-react-app
+    restart: unless-stopped
+    ports:
+      # Exposing the app on port 8080 (which is free according to your provided list)
+      # Format is HOST_PORT:CONTAINER_PORT
+      - "8080:80"

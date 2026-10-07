@@ -1,0 +1,305 @@
+/* ==========================================================================
+   REACT DESIGN SYSTEM - DEGREE ADMISSIONS PAGE MIGRATION
+   Migrated from inner-admissions.css and form-redesign.css
+   ========================================================================== */
+
+/* 1. Inner Page Hero */
+.inner-hero-section {
+    background-color: var(--color-primary);
+    padding: 80px 5%;
+    text-align: center;
+    border-bottom: 4px solid var(--color-accent);
+}
+
+.inner-hero-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.inner-hero-title {
+    font-family: var(--font-heading);
+    color: var(--color-white);
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* 2. Admissions Hub Section */
+.admissions-hub-section {
+    padding: 80px 5%;
+    background-color: var(--color-surface);
+}
+
+.admissions-hub-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* Hub Left: Information Panel */
+.admissions-info-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.admissions-info-panel h2 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.admissions-info-panel p {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.contact-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0px 5px 20px rgba(10, 29, 55, 0.03);
+}
+
+.contact-card h3 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.contact-methods-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-methods-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.contact-methods-list li:last-child {
+    margin-bottom: 0;
+}
+
+.contact-icon-wrapper {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(199, 31, 36, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+    margin-right: 15px;
+    flex-shrink: 0;
+    font-size: 16px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-label {
+    font-family: var(--font-body);
+    color: var(--color-text-muted);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.contact-value {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.contact-value a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contact-value a:hover {
+    color: var(--color-accent);
+}
+
+/* Hub Right: Form Wrapper */
+.admissions-form-panel {
+    flex: 1;
+}
+
+.admissions-form-panel .admissions-form-wrapper {
+    margin: 0;
+    width: 100%;
+}
+
+/* Form Redesign CSS */
+.admissions-form-wrapper {
+    background-color: var(--color-white);
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    border: 1px solid var(--color-border);
+}
+
+.admissions-form-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.admissions-form-title h2 {
+    color: var(--color-primary);
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.admissions-form-title p {
+    color: var(--color-text-muted);
+    font-size: 16px;
+}
+
+fieldset.form-group {
+    border: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+fieldset.form-group legend {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-border);
+    width: 100%;
+}
+
+.form-field {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+}
+
+.required-asterisk {
+    color: var(--color-accent);
+    margin-left: 4px;
+}
+
+.form-input {
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--color-text);
+    padding: 12px 16px;
+    border: 1px solid #CBD5E1;
+    border-radius: 4px;
+    background-color: var(--color-white);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(10, 29, 55, 0.1);
+}
+
+textarea.form-input {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-submit-wrapper {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-submit-enquiry {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 14px 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+}
+
+.btn-submit-enquiry:hover {
+    background-color: #A61A1E;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .form-row-split {
+        display: flex;
+        gap: 20px;
+    }
+    
+    .form-row-split .form-field {
+        flex: 1;
+    }
+}
+
+@media (min-width: 992px) {
+    .inner-hero-section {
+        padding: 100px 5%;
+    }
+
+    .inner-hero-title {
+        font-size: 42px;
+    }
+    
+    .admissions-hub-container {
+        flex-direction: row;
+        gap: 80px;
+    }
+}
+
+@media (max-width: 414px) {
+    .inner-hero-title,
+    .admissions-info-panel h2 {
+        font-size: 28px;
+    }
+    
+    .contact-card h3 {
+        font-size: 22px;
+    }
+    
+    .contact-card {
+        padding: 20px;
+    }
+}
