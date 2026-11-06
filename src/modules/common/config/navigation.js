@@ -18,11 +18,13 @@ export const navigation = {
   ],
   school: [
     { label: 'Home', path: '/school', isPlaceholder: false },
-    { label: 'About', path: '/school#about', isPlaceholder: false },
-    { label: 'Academics', path: '/school#academics', isPlaceholder: false },
-    { label: 'Campus Life', path: '/school#campus', isPlaceholder: false },
-    { label: 'Admissions', path: '/school#admissions', isPlaceholder: false },
-    { label: 'Contact', path: '/school#contact', isPlaceholder: false }
+    { label: 'About Us', path: '/school/about', isPlaceholder: false },
+    { label: 'Courses', path: '/school/courses', isPlaceholder: false },
+    { label: 'Admissions', path: '/school/admissions', isPlaceholder: false },
+    { label: 'Facilities', path: '/school/facilities', isPlaceholder: false },
+    { label: 'Faculty', path: '/school/faculty', isPlaceholder: false },
+    { label: 'Gallery', path: '/school/gallery', isPlaceholder: false },
+    { label: 'Contact Us', path: '/school/contact', isPlaceholder: false }
   ],
   juniorcollege: [
     { label: 'Home', path: '/juniorcollege', isPlaceholder: false },

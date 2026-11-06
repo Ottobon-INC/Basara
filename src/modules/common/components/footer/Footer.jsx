@@ -64,6 +64,9 @@ export default function Footer({ institutionConfig, navigationLinks }) {
             {institutionConfig.id !== 'degree' && (
               <NavLink to="/degree">Degree College</NavLink>
             )}
+            {institutionConfig.id !== 'school' && (
+              <NavLink to="/school">Sri Basara School</NavLink>
+            )}
           </div>
         </div>
       </Container>

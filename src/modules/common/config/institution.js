@@ -24,9 +24,9 @@ export const institutions = {
     name: 'Sri Basara Leads School with International Standards',
     description: 'Fostering academic excellence and holistic development in a warm, nurturing environment.',
     logo: '/assets/school/SRI BASARA.png',
-    phone: '+91 99855 77636',
+    phone: '9985577636',
     email: 'info@sribasara.in',
-    address: '#7-44-194/1, Ward No.8, Balaji Nagar, Tagarapuvalasa, Bheemunipatnam(M), Visakhapatnam Dist., 531162',
+    address: 'D.No. 6-123/1/4, Near Electrical Sub Station, Balaji Nagar, Tagarapuvalasa, Visakhapatnam-531162',
     theme: 'school'
   },
   juniorcollege: {

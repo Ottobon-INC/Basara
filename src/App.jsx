@@ -5,6 +5,7 @@ import ScrollToTop from './modules/common/components/ScrollToTop';
 import UmbrellaHome from './modules/umbrella/pages/UmbrellaHome';
 import UmbrellaAbout from './modules/umbrella/pages/UmbrellaAbout';
 import ChairmanMessagePage from './modules/umbrella/pages/ChairmanMessagePage';
+
 import DegreeHome from './modules/degree/pages/DegreeHome';
 import DegreeAbout from './modules/degree/pages/DegreeAbout';
 import DegreeCourses from './modules/degree/pages/DegreeCourses';
@@ -14,7 +15,16 @@ import DegreeFaculty from './modules/degree/pages/DegreeFaculty';
 import DegreeGallery from './modules/degree/pages/DegreeGallery';
 import DegreeContact from './modules/degree/pages/DegreeContact';
 
+import SchoolLayout from './modules/school/layouts/SchoolLayout';
 import SchoolHome from './modules/school/pages/SchoolHome';
+import SchoolAbout from './modules/school/pages/SchoolAbout';
+import SchoolCourses from './modules/school/pages/SchoolCourses';
+import SchoolAdmissions from './modules/school/pages/SchoolAdmissions';
+import SchoolFacilities from './modules/school/pages/SchoolFacilities';
+import SchoolFaculty from './modules/school/pages/SchoolFaculty';
+import SchoolGallery from './modules/school/pages/SchoolGallery';
+import SchoolContact from './modules/school/pages/SchoolContact';
+
 import JuniorCollegeHome from './modules/juniorcollege/pages/JuniorCollegeHome';
 import DefenseAcademyHome from './modules/defenseacademy/pages/DefenseAcademyHome';
 
@@ -40,8 +50,15 @@ function App() {
           <Route path="contact" element={<DegreeContact />} />
         </Route>
         
-        <Route path="/school" element={<InstitutionLayout institutionId="school" />}>
+        <Route path="/school" element={<SchoolLayout />}>
           <Route index element={<SchoolHome />} />
+          <Route path="about" element={<SchoolAbout />} />
+          <Route path="courses" element={<SchoolCourses />} />
+          <Route path="admissions" element={<SchoolAdmissions />} />
+          <Route path="facilities" element={<SchoolFacilities />} />
+          <Route path="faculty" element={<SchoolFaculty />} />
+          <Route path="gallery" element={<SchoolGallery />} />
+          <Route path="contact" element={<SchoolContact />} />
         </Route>
         
         <Route path="/juniorcollege" element={<InstitutionLayout institutionId="juniorcollege" />}>

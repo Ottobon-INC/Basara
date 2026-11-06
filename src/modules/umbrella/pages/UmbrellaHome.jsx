@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import Container from '../../common/components/Container';
 import Section from '../../common/components/Section';
 import { ModernAboutSection } from '../../common/components/InstitutionComponents';
 import ChairmanMessage from '../../common/components/ChairmanMessage';
@@ -96,10 +95,16 @@ export default function UmbrellaHome() {
           {/* Degree College (VERIFIED) */}
           <article className="institution-card card-degree">
             <div className="inst-card-img" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', padding: '1rem' }}>
-              <img src="/assets/umbrella/college-1.jpeg" alt="Degree College Campus" style={{ width: '100%', height: '100%', objectFit: 'contain' }} loading="lazy" />
+              <Link to="/degree" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%' }}>
+                <img src="/assets/umbrella/college-1.jpeg" alt="Degree College Campus" style={{ width: '100%', height: '100%', objectFit: 'contain' }} loading="lazy" />
+              </Link>
             </div>
             <div className="inst-card-content">
-              <h3 className="inst-card-title">Sri Basara Degree College</h3>
+              <h3 className="inst-card-title">
+                <Link to="/degree" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  Sri Basara Degree College
+                </Link>
+              </h3>
               <p className="inst-card-desc">Offering comprehensive undergraduate programs in Sciences, Commerce, and Arts with state-of-the-art laboratory facilities and experienced faculty.</p>
               <Link to="/degree" className="inst-card-link">
                 Explore Degree College
@@ -123,10 +128,16 @@ export default function UmbrellaHome() {
           {/* International School */}
           <article id="school" className="institution-card card-school">
             <div className="inst-card-img" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', padding: '1rem' }}>
-              <img src="/assets/school/collegge.png" alt="International School Campus" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              <Link to="/school" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%' }}>
+                <img src="/assets/school/collegge.png" alt="International School Campus" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </Link>
             </div>
             <div className="inst-card-content">
-              <h3 className="inst-card-title">Sri Basara Leads School with International Standards</h3>
+              <h3 className="inst-card-title">
+                <Link to="/school" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  Sri Basara Leads School with International Standards
+                </Link>
+              </h3>
               <p className="inst-card-desc">A nurturing environment laying the critical foundation for lifelong learning and personal development.</p>
               <Link to="/school" className="inst-card-link">
                 Explore International School
@@ -138,10 +149,16 @@ export default function UmbrellaHome() {
           {/* Defence Academy */}
           <article id="defence" className="institution-card card-defence">
             <div className="inst-card-img" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', padding: '1rem' }}>
-              <img src="/assets/defenseacademy/basara defense academy.png" alt="Defence Academy Overview" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              <Link to="/defenseacademy" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%' }}>
+                <img src="/assets/defenseacademy/basara defense academy.png" alt="Defence Academy Overview" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </Link>
             </div>
             <div className="inst-card-content">
-              <h3 className="inst-card-title">Sri Basara Defence Academy</h3>
+              <h3 className="inst-card-title">
+                <Link to="/defenseacademy" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  Sri Basara Defence Academy
+                </Link>
+              </h3>
               <p className="inst-card-desc">Structured, disciplined training programs preparing candidates for prestigious careers in the defense services.</p>
               <Link to="/defenseacademy" className="inst-card-link">
                 Explore Defence Academy

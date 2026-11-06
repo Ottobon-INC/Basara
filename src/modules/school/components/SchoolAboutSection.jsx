@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import './SchoolAboutSection.css';
 
 export default function SchoolAboutSection() {
@@ -17,7 +18,7 @@ export default function SchoolAboutSection() {
       { threshold: 0.1 }
     );
 
-    const elements = sectionRef.current.querySelectorAll('.sa-animate');
+    const elements = sectionRef.current?.querySelectorAll('.sa-animate') || [];
     elements.forEach((el) => observer.observe(el));
 
     return () => {
@@ -62,10 +63,10 @@ export default function SchoolAboutSection() {
           <p className="sa-text">
             We foster curiosity, critical thinking, and character — preparing every child to become a responsible and innovative leader of tomorrow. Our holistic approach nurtures academic brilliance alongside strong moral values and creative expression.
           </p>
-          <a href="#features" className="sa-link">
+          <Link to="/school/about" className="sa-link">
             Discover what makes us different
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

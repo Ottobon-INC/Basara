@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { InstitutionHero, StatsBar, FeatureCards, SplitShowcase, AdmissionsBanner, AboutTextSection, ContactMapSection } from '../../common/components/InstitutionComponents';
+import { InstitutionHero, FeatureCards, SplitShowcase, ContactMapSection } from '../../common/components/InstitutionComponents';
 import SchoolAboutSection from '../components/SchoolAboutSection';
 import SchoolAdmissionsEnquiry from '../components/SchoolAdmissionsEnquiry';
 
@@ -16,10 +16,10 @@ export default function SchoolHome() {
         title="Sri Basara Leads School with International Standards"
         description="Fostering academic excellence and holistic development in a warm, nurturing environment."
         video="/assets/school/basara-school.mp4"
-        ctaText="Enquire Now"
-        ctaHref="#admissions"
-        secondaryCtaText="Explore More"
-        secondaryCtaHref="#academics"
+        ctaText="Apply Now"
+        ctaHref="/school/admissions"
+        secondaryCtaText="Explore Programs"
+        secondaryCtaHref="/school/courses"
         trustText="Join <strong>2000+</strong> Happy Students<br/>Building a Brighter Future"
       />
 
@@ -66,7 +66,7 @@ export default function SchoolHome() {
           'Personalized Attention'
         ]}
         ctaText="Explore Academics"
-        ctaHref="#academics"
+        ctaHref="/school/courses"
       />
 
       <SplitShowcase
@@ -82,6 +82,8 @@ export default function SchoolHome() {
           { icon: 'Users', label: 'Clubs & Activities' },
           { icon: 'User', label: 'Leadership' }
         ]}
+        ctaText="Explore Facilities"
+        ctaHref="/school/facilities"
       />
 
       <SchoolAdmissionsEnquiry />

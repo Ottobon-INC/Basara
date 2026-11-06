@@ -3,11 +3,12 @@
    ========================================================================== */
 
 /* 
-  School Theme (Pencils, Pens, Playful)
+  School Theme (Sri Basara Leads School)
+  Deep Navy / Purple & Warm Orange / Brown Accent
 */
 .theme-school {
-  --color-primary: #1e3a8a; /* A slightly brighter navy for school */
-  --color-accent: #e11d48; /* A brighter crimson/pink for school */
+  --color-primary: #302F7F; /* Deep navy/purple */
+  --color-accent: #B95308; /* Warm orange/brown */
   --theme-bg-pattern: url('/assets/school/pencil_pattern.jpg');
 }
 

@@ -88,6 +88,16 @@ export default function DegreeAdmissions() {
   
               <fieldset className="form-group">
                 <legend>Enquiry Details</legend>
+                <div className="form-field">
+                  <label htmlFor="section" className="form-label">Select Institution<span className="required-asterisk">*</span></label>
+                  <select id="section" name="section" className="form-input" required defaultValue="">
+                    <option value="" disabled>-- Select Institution --</option>
+                    <option value="Sri Basara Degree College">Sri Basara Degree College</option>
+                    <option value="Sri Basara Junior College">Sri Basara Junior College</option>
+                    <option value="Sri Basara Leads School with International Standards">Sri Basara Leads School with International Standards</option>
+                    <option value="Sri Basara Defence Academy">Sri Basara Defence Academy</option>
+                  </select>
+                </div>
                 <div className="form-row-split">
                   <div className="form-field">
                     <label htmlFor="subject" className="form-label">Subject<span className="required-asterisk">*</span></label>

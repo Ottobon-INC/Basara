@@ -104,3 +104,76 @@
       gap: 1rem;
   }
 }
+
+/* ==========================================================================
+   COMPACT FOOTER OVERRIDES FOR SCHOOL
+   ========================================================================== */
+.theme-school .site-footer {
+  padding: 2.25rem 0 0 0;
+}
+
+.theme-school .footer-grid {
+  gap: 1.75rem 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.theme-school .footer-logo {
+  max-width: 170px;
+  margin-bottom: 0.5rem;
+}
+
+.theme-school .footer-brand p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  max-width: 380px;
+}
+
+.theme-school .footer-title {
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.25rem;
+  letter-spacing: 0.06em;
+}
+
+.theme-school .footer-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.35rem 1rem;
+}
+
+.theme-school .footer-links li {
+  margin-bottom: 0;
+}
+
+.theme-school .footer-links a {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.theme-school .footer-links a:hover {
+  color: #ffffff;
+}
+
+.theme-school .footer-contact p {
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.theme-school .footer-bottom {
+  padding: 0.85rem 0;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.theme-school .footer-bottom-links {
+  gap: 1rem;
+}
+
+.theme-school .footer-bottom-links a {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.75);
+}
