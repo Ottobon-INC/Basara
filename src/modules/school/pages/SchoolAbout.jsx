@@ -84,19 +84,26 @@ export default function SchoolAbout() {
             <h2 className="school-section-title">Message From The Management</h2>
           </div>
 
-          <div className="school-narrative-grid" style={{ alignItems: 'center' }}>
-            <div className="school-narrative-img-wrap" style={{ textAlign: 'center', maxWidth: '320px', margin: '0 auto' }}>
-              <img src="/assets/degree/11.jpeg" alt="Shri Pudi Ramesh Garu, Chairman" style={{ maxHeight: '320px', objectFit: 'contain', background: '#f8fafc' }} loading="lazy" />
+          <div className="school-narrative-grid" style={{ alignItems: 'center', gap: '48px' }}>
+            <div className="school-narrative-img-wrap" style={{ borderRadius: '14px', overflow: 'hidden', boxShadow: '0 12px 32px rgba(48, 47, 127, 0.12)', height: '100%', minHeight: '340px' }}>
+              <img 
+                src="/assets/degree/11.jpeg" 
+                alt="Shri Pudi Ramesh Garu, Chairman" 
+                style={{ width: '100%', height: '100%', minHeight: '340px', maxHeight: '420px', objectFit: 'cover', objectPosition: 'center 20%', display: 'block' }} 
+                loading="lazy" 
+              />
             </div>
-            <div className="school-narrative-text">
-              <h2 style={{ fontSize: '24px', marginBottom: '6px' }}>Shri Pudi Ramesh Garu</h2>
-              <p style={{ color: 'var(--color-accent, #B95308)', fontWeight: 600, marginTop: '0', marginBottom: '1rem', fontSize: '0.95rem' }}>
+            <div className="school-narrative-text" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+              <h2 style={{ fontSize: '28px', color: 'var(--color-primary, #302F7F)', marginBottom: '8px', lineHeight: 1.25 }}>Shri Pudi Ramesh Garu</h2>
+              <p style={{ color: 'var(--color-accent, #B95308)', fontWeight: 700, marginTop: '0', marginBottom: '1.25rem', fontSize: '1.05rem', letterSpacing: '0.01em' }}>
                 Chairman, Sri Basara Educational Institutions
               </p>
-              <p style={{ fontSize: '1rem', lineHeight: '1.65', marginBottom: '1rem' }}>
-                "At Sri Basara Leads International School, our commitment is to provide every child with an atmosphere where dreams take flight and values anchor character. We believe true education does not merely train students to pass exams, but inspires them to face the future with confidence, wisdom, and moral courage."
-              </p>
-              <p style={{ fontSize: '0.92rem', color: '#64748b', fontStyle: 'italic', margin: 0 }}>
+              <div style={{ position: 'relative', paddingLeft: '18px', borderLeft: '3px solid var(--color-accent, #B95308)', marginBottom: '1.25rem' }}>
+                <p style={{ fontSize: '1.05rem', lineHeight: '1.75', color: '#334155', margin: 0 }}>
+                  "At Sri Basara Leads International School, our commitment is to provide every child with an atmosphere where dreams take flight and values anchor character. We believe true education does not merely train students to pass exams, but inspires them to face the future with confidence, wisdom, and moral courage."
+                </p>
+              </div>
+              <p style={{ fontSize: '0.98rem', color: 'var(--color-primary, #302F7F)', fontWeight: 600, fontStyle: 'italic', margin: 0 }}>
                 Every Child Has Potential. Every Learner Deserves Excellence.
               </p>
             </div>
