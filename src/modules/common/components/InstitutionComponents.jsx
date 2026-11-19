@@ -574,7 +574,7 @@ export const ContactMapSection = ({ id, address, phone, email, mapUrl }) => {
   return (
     <section id={id} className="inst-contact-map">
       <Container>
-        <div className="inst-section-header" style={{ marginBottom: '3rem', textAlign: 'center' }}>
+        <div className="inst-section-header" style={{ marginBottom: '1.5rem', textAlign: 'center' }}>
           <h2><span style={{ borderBottom: '3px solid var(--color-accent)' }}>Contact</span> Us</h2>
         </div>
         <div className="inst-contact-map-grid">
