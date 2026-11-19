@@ -58,10 +58,10 @@ export default function SchoolAboutSection() {
         {/* Right: Description text */}
         <div className="sa-right sa-animate sa-slide-left sa-delay-2">
           <p className="sa-text">
-            <strong>Sri Basara Leads International School</strong> is committed to providing meaningful, child-centred, and future-focused education from Nursery to Grade X. We believe that every child is unique and possesses tremendous potential. Our responsibility is to recognise that potential, nurture individual talents, and create opportunities for every learner to grow academically, socially, emotionally, physically, and creatively.
+            <strong>Sri Basara Leads International School</strong> provides meaningful, child-centred education from Nursery to Grade X under CBSE & State curriculum pathways. We recognize that every child has unique potential, nurturing individual talents across academics, creative expression, and sports.
           </p>
           <p className="sa-text">
-            Our educational approach blends strong academic foundations with modern teaching methodologies, technology-enabled learning, AI, Robotics, and value-based education. We do not simply prepare students for examinations; we prepare them for life.
+            Blending strong conceptual foundations with AI, Robotics, and value-based education, we do not simply prepare students for examinations; we prepare them for life.
           </p>
           <Link to="/school/about" className="sa-link">
             Explore our Vision, Mission & 7-Pillar Learning Approach

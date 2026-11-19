@@ -2,10 +2,11 @@ import React from 'react';
 import SchoolCTA from '../components/SchoolCTA';
 import './school-pages.css';
 
-const CORE_PILLARS = [
+const UNIQUE_APPROACHES = [
   {
-    title: 'Academic & Language Foundations',
-    desc: 'Strong subject mastery under CBSE & State curriculum pathways, with dedicated focus on English communication, vocabulary, and reading.',
+    num: '01',
+    title: 'Academic Excellence',
+    desc: 'Strong subject foundations, effective classroom teaching, regular assessments, and individual academic support.',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
@@ -14,8 +15,29 @@ const CORE_PILLARS = [
     )
   },
   {
-    title: 'AI, Robotics & STEM Lab',
-    desc: 'Hands-on learning through robotics kits, coding basics, scientific experiments, and our Makers Space Innovation Hub.',
+    num: '02',
+    title: 'English Language Development',
+    desc: 'Special focus on vocabulary, communication, reading, writing, comprehension, and spoken English.',
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      </svg>
+    )
+  },
+  {
+    num: '03',
+    title: 'IIT-JEE & NEET Foundation',
+    desc: 'Early exposure to analytical thinking, mathematical reasoning, scientific concepts, and competitive examination skills.',
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+      </svg>
+    )
+  },
+  {
+    num: '04',
+    title: 'AI, Robotics & STEM Education',
+    desc: 'Hands-on learning through robotics, coding, scientific experiments, maker activities, and innovation projects.',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="11" width="18" height="10" rx="2"></rect>
@@ -25,17 +47,43 @@ const CORE_PILLARS = [
     )
   },
   {
-    title: 'IIT-JEE & NEET Foundation',
-    desc: 'Early exposure to analytical thinking, mathematical reasoning, mental ability, and competitive examination problem-solving.',
+    num: '05',
+    title: 'Arithmetic & Mental Ability',
+    desc: 'Developing numerical ability, logical reasoning, speed, accuracy, and problem-solving skills.',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+        <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+        <line x1="8" y1="6" x2="16" y2="6"></line>
+        <line x1="16" y1="14" x2="16" y2="18"></line>
+        <path d="M16 10h.01"></path>
+        <path d="M12 10h.01"></path>
+        <path d="M8 10h.01"></path>
+        <path d="M12 14h.01"></path>
+        <path d="M8 14h.01"></path>
+        <path d="M12 18h.01"></path>
+        <path d="M8 18h.01"></path>
       </svg>
     )
   },
   {
-    title: 'Sports & Life Skills',
-    desc: 'Physical fitness, teamwork, sportsmanship, discipline, moral values, and emotional intelligence through sports and games.',
+    num: '06',
+    title: 'Sports & Physical Education',
+    desc: 'Encouraging physical fitness, teamwork, discipline, sportsmanship, and leadership through sports and games.',
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+        <path d="M4 22h16"></path>
+        <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+        <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+        <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path>
+      </svg>
+    )
+  },
+  {
+    num: '07',
+    title: 'Life Skills & Personality Development',
+    desc: 'Developing confidence, communication, emotional intelligence, creativity, collaboration, and social responsibility.',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10"></circle>
@@ -58,20 +106,34 @@ export default function SchoolAbout() {
           <p className="school-inner-hero-desc">
             Discover Potential. Develop Excellence. Lead the Future.
           </p>
-          <div style={{ marginTop: '1rem' }}>
-            <span style={{
+          <div style={{ marginTop: '1.25rem' }}>
+            <div style={{
               display: 'inline-block',
-              background: 'rgba(251, 191, 36, 0.18)',
-              border: '1px solid #fbbf24',
-              color: '#fbbf24',
-              padding: '5px 16px',
-              borderRadius: '20px',
-              fontSize: '0.82rem',
-              fontWeight: 700,
-              letterSpacing: '0.08em'
+              background: 'rgba(251, 191, 36, 0.15)',
+              border: '1px solid rgba(251, 191, 36, 0.6)',
+              borderRadius: '24px',
+              padding: '8px 24px',
+              textAlign: 'center'
             }}>
-              MOTTO: LEARN. LEAD. EXCEL.
-            </span>
+              <div style={{
+                color: '#fbbf24',
+                fontSize: '1rem',
+                fontWeight: 800,
+                letterSpacing: '0.12em'
+              }}>
+                LEARN. LEAD. EXCEL.
+              </div>
+              <div style={{
+                color: '#ffffff',
+                fontSize: '0.82rem',
+                fontWeight: 500,
+                fontStyle: 'italic',
+                marginTop: '3px',
+                opacity: 0.95
+              }}>
+                Every Child Has Potential. Every Learner Deserves Excellence.
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -188,27 +250,47 @@ export default function SchoolAbout() {
         </div>
       </section>
 
-      {/* 4. Core Pillars of Learning (4 Concise Cards) */}
+      {/* 4. Our Unique Learning Approach (All 7 Pillars) */}
       <section className="school-page-section alt-bg">
         <div className="school-page-container">
           <div className="school-section-header">
-            <span className="school-section-subtitle">Core Pillars</span>
-            <h2 className="school-section-title">Our Learning Approach</h2>
+            <span className="school-section-subtitle">Holistic Framework</span>
+            <h2 className="school-section-title">Our Unique Learning Approach</h2>
             <p className="school-section-desc">
-              Four foundational pillars preparing students with knowledge, skills, values, and opportunities.
+              Seven foundational pillars preparing students with strong academic mastery, analytical thinking, and life skills.
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '22px' }}>
-            {CORE_PILLARS.map((pillar, idx) => (
-              <div key={idx} className="school-feature-box" style={{ padding: '24px 22px' }}>
-                <div className="school-feature-icon" style={{ marginBottom: '14px', width: '44px', height: '44px' }}>
-                  {pillar.icon}
+          <div className="school-approach-grid">
+            {UNIQUE_APPROACHES.map((item) => (
+              <div key={item.num} className="school-approach-card">
+                <div className="school-approach-header">
+                  <span className="school-approach-num">{item.num}</span>
+                  <div className="school-approach-icon">{item.icon}</div>
                 </div>
-                <h3 style={{ fontSize: '18px', marginBottom: '8px' }}>{pillar.title}</h3>
-                <p style={{ fontSize: '0.9rem', lineHeight: '1.55', margin: 0 }}>{pillar.desc}</p>
+                <h3 className="school-approach-title">{item.title}</h3>
+                <p className="school-approach-desc">{item.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Our Commitment Section */}
+      <section className="school-page-section">
+        <div className="school-page-container">
+          <div className="school-commitment-block">
+            <span className="school-section-subtitle">Our Promise</span>
+            <h2 className="school-section-title" style={{ marginBottom: '16px' }}>Our Commitment</h2>
+            <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: '1.75', maxWidth: '820px', margin: '0 auto 14px auto' }}>
+              At <strong>Sri Basara Leads International School</strong>, we believe that education is a journey of discovering possibilities and transforming potential into achievement.
+            </p>
+            <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: '1.75', maxWidth: '820px', margin: '0 auto 20px auto' }}>
+              We are committed to providing every child with the right knowledge, skills, values, guidance, and opportunities to build a successful and meaningful future.
+            </p>
+            <div className="school-commitment-quote" style={{ margin: '15px auto 0 auto' }}>
+              "We do not simply prepare students for examinations; <span>we prepare them for life.</span>"
+            </div>
           </div>
         </div>
       </section>
