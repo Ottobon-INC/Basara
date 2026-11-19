@@ -36,7 +36,7 @@ export const navigation = {
   ],
   defenseacademy: [
     { label: 'Home', path: '/defenseacademy', isPlaceholder: false },
-    { label: 'About', path: '/defenseacademy#about', isPlaceholder: false },
+    { label: 'About Us', path: '/defenseacademy/about', isPlaceholder: false },
     { label: 'Training Programs', path: '/defenseacademy#programs', isPlaceholder: false },
     { label: 'Facilities', path: '/defenseacademy#facilities', isPlaceholder: false },
     { label: 'Admissions', path: '/defenseacademy#admissions', isPlaceholder: false },

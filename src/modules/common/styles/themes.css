@@ -33,7 +33,8 @@
 /* 
   Defense Academy Theme (Camouflage, Disciplined)
 */
-.theme-defense {
+.theme-defense,
+.theme-da {
   --color-primary: #14532d; /* Military Green */
   --color-accent: #ea580c; /* Orange accent */
   --theme-bg-pattern: url('/assets/defenseacademy/camo_pattern.jpg');
@@ -43,7 +44,8 @@
 .theme-school .inst-about-text-section,
 .theme-jc .inst-about-text-section,
 .theme-degree .inst-about-text-section,
-.theme-defense .inst-about-text-section {
+.theme-defense .inst-about-text-section,
+.theme-da .inst-about-text-section {
   background-image: var(--theme-bg-pattern) !important;
   background-size: 300px !important;
   background-repeat: repeat !important;

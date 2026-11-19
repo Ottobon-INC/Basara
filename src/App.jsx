@@ -27,6 +27,7 @@ import SchoolContact from './modules/school/pages/SchoolContact';
 
 import JuniorCollegeHome from './modules/juniorcollege/pages/JuniorCollegeHome';
 import DefenseAcademyHome from './modules/defenseacademy/pages/DefenseAcademyHome';
+import DefenseAcademyAbout from './modules/defenseacademy/pages/DefenseAcademyAbout';
 
 function App() {
   return (
@@ -67,6 +68,7 @@ function App() {
         
         <Route path="/defenseacademy" element={<InstitutionLayout institutionId="defenseacademy" />}>
           <Route index element={<DefenseAcademyHome />} />
+          <Route path="about" element={<DefenseAcademyAbout />} />
         </Route>
       </Routes>
     </BrowserRouter>
