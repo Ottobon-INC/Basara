@@ -699,7 +699,7 @@ export default function SchoolFaculty() {
       {/* 4. Mentorship Philosophy */}
       <section className="school-page-section alt-bg">
         <div className="school-page-container">
-          <div className="school-narrative-grid">
+          <div className="school-mentorship-wrap">
             <div className="school-narrative-text">
               <span className="school-section-subtitle">Student-Centric Pedagogy</span>
               <h2>Nurturing Mentors, Not Just Instructors</h2>
@@ -710,7 +710,7 @@ export default function SchoolFaculty() {
                 We combine strong foundational support with early IIT-JEE, NEET, and Olympiad training to empower every student's future.
               </p>
             </div>
-            <div className="school-narrative-img-wrap">
+            <div className="school-mentorship-img-wrap">
               <img src="/assets/school/academics.png" alt="Sri Basara Academic Faculty" loading="lazy" />
             </div>
           </div>

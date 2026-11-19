@@ -456,8 +456,46 @@
   color: #94a3b8;
 }
 
-/* 6. Responsive adjustments */
+/* 6. Mentorship Narrative Section */
+.school-mentorship-wrap {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.school-mentorship-img-wrap {
+  max-width: 380px;
+  max-height: 230px;
+  width: 100%;
+  margin-left: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(48, 47, 127, 0.1);
+  border: 1px solid #e2e8f0;
+}
+
+.school-mentorship-img-wrap img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+}
+
+/* 7. Responsive adjustments */
 @media (max-width: 768px) {
+  .school-mentorship-wrap {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .school-mentorship-img-wrap {
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 220px;
+  }
+  .school-mentorship-img-wrap img {
+    height: 220px;
+  }
   .school-faculty-stats {
     gap: 10px;
   }
