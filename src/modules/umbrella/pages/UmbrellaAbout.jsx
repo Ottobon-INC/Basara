@@ -42,7 +42,7 @@ export default function UmbrellaAbout() {
           <h2>Sri Basara Educational Society</h2>
           <p className="about-footer-tagline">Where Education Builds the Future.</p>
           <div className="about-footer-institutions">
-            <Link to="/school">Sri Basara Leads School with International Standards</Link>
+            <Link to="/school">Sri Basara Leads International School</Link>
             <span className="about-footer-divider">|</span>
             <Link to="/juniorcollege">Sri Basara Junior Colleges</Link>
             <span className="about-footer-divider">|</span>

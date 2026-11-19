@@ -34,7 +34,7 @@ export default function SchoolAdmissions() {
           <span className="school-inner-hero-tag">Enrollment Open</span>
           <h1 className="school-inner-hero-title">Admissions 2026 - 2027</h1>
           <p className="school-inner-hero-desc">
-            Take the first step toward securing your child's holistic educational journey at Sri Basara Leads School.
+            Take the first step toward securing your child's future-focused educational journey at Sri Basara Leads International School.
           </p>
         </div>
       </section>

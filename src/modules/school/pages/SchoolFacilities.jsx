@@ -138,7 +138,7 @@ export default function SchoolFacilities() {
             <span className="school-section-subtitle">Infrastructure</span>
             <h2 className="school-section-title">Designed for Modern Learning</h2>
             <p className="school-section-desc">
-              Every facility at Sri Basara Leads School is constructed with student safety, comfort, and interactive engagement in mind.
+              Every facility at Sri Basara Leads International School is constructed with student safety, comfort, and interactive engagement in mind.
             </p>
           </div>
 

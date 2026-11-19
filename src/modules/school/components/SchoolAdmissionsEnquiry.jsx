@@ -10,7 +10,7 @@ export default function SchoolAdmissionsEnquiry() {
         <div className="school-admissions-info-panel">
           <h2>Begin Your Application</h2>
           <p>
-            Submit an enquiry and our admissions team will provide you with all necessary information regarding our curriculum, eligibility requirements, and the enrollment process. We look forward to welcoming you to Sri Basara Leads School with International Standards.
+            Submit an enquiry and our admissions team will provide you with all necessary information regarding our curriculum, eligibility requirements, and the enrollment process. We look forward to welcoming you to Sri Basara Leads International School.
           </p>
           
           <div className="school-contact-card">

@@ -21,8 +21,8 @@ export const institutions = {
   },
   school: {
     id: 'school',
-    name: 'Sri Basara Leads School with International Standards',
-    description: 'Fostering academic excellence and holistic development in a warm, nurturing environment.',
+    name: 'Sri Basara Leads International School',
+    description: 'Discover Potential. Develop Excellence. Lead the Future. Child-centred and future-focused education from Nursery to Grade X.',
     logo: '/assets/school/SRI BASARA.png',
     phone: '9985577636',
     email: 'info@sribasara.in',

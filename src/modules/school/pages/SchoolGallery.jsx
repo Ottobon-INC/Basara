@@ -267,7 +267,7 @@ export default function SchoolGallery() {
           <span className="school-inner-hero-tag">Photo Showcase</span>
           <h1 className="school-inner-hero-title">School Life & Gallery</h1>
           <p className="school-inner-hero-desc">
-            A glimpse into the vibrant moments, festival celebrations, sports tournaments, hands-on activities, and campus life at Sri Basara Leads School.
+            A glimpse into the vibrant moments, festival celebrations, sports tournaments, hands-on activities, and campus life at Sri Basara Leads International School.
           </p>
         </div>
       </section>

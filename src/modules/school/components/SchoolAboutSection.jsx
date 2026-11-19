@@ -31,26 +31,26 @@ export default function SchoolAboutSection() {
       <div className="sa-container">
         {/* Left: Large heading area */}
         <div className="sa-left sa-animate sa-slide-right">
-          <span className="sa-label">About Sri Basara</span>
+          <span className="sa-label">Sri Basara Leads International School</span>
           <h2 className="sa-heading">
-            Where Every Child's
-            <span className="sa-heading-accent"> Potential </span>
-            Finds Its Purpose
+            Discover
+            <span className="sa-heading-accent"> Potential. </span>
+            Develop Excellence. Lead the Future.
           </h2>
           <div className="sa-stats-inline">
             <div className="sa-stat-inline">
-              <strong>20+</strong>
-              <span>Years</span>
+              <strong>Nursery - X</strong>
+              <span>Grades Offered</span>
             </div>
             <div className="sa-stat-divider"></div>
             <div className="sa-stat-inline">
-              <strong>2000+</strong>
-              <span>Students</span>
+              <strong>CBSE & State</strong>
+              <span>Curriculum Pathways</span>
             </div>
             <div className="sa-stat-divider"></div>
             <div className="sa-stat-inline">
-              <strong>50+</strong>
-              <span>Faculty</span>
+              <strong>7 Pillars</strong>
+              <span>Learning Approach</span>
             </div>
           </div>
         </div>
@@ -58,13 +58,13 @@ export default function SchoolAboutSection() {
         {/* Right: Description text */}
         <div className="sa-right sa-animate sa-slide-left sa-delay-2">
           <p className="sa-text">
-            The management and the team of Sri Basara Educational Institutions have been incessantly striving to carve out appropriate means to reach coveted academic heights. There has been no compromise regarding infrastructure and other facilities, ensuring our students receive the highest quality education.
+            <strong>Sri Basara Leads International School</strong> is committed to providing meaningful, child-centred, and future-focused education from Nursery to Grade X. We believe that every child is unique and possesses tremendous potential. Our responsibility is to recognise that potential, nurture individual talents, and create opportunities for every learner to grow academically, socially, emotionally, physically, and creatively.
           </p>
           <p className="sa-text">
-            We foster curiosity, critical thinking, and character — preparing every child to become a responsible and innovative leader of tomorrow. Our holistic approach nurtures academic brilliance alongside strong moral values and creative expression.
+            Our educational approach blends strong academic foundations with modern teaching methodologies, technology-enabled learning, AI, Robotics, and value-based education. We do not simply prepare students for examinations; we prepare them for life.
           </p>
           <Link to="/school/about" className="sa-link">
-            Discover what makes us different
+            Explore our Vision, Mission & 7-Pillar Learning Approach
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </Link>
         </div>

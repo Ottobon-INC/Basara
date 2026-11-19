@@ -12,75 +12,75 @@ export default function SchoolHome() {
   return (
     <div className="theme-school">
       <InstitutionHero
-        tagline="Sri Basara Educational Institutions"
-        title="Sri Basara Leads School with International Standards"
-        description="Fostering academic excellence and holistic development in a warm, nurturing environment."
+        tagline="Discover Potential. Develop Excellence. Lead the Future."
+        title="Sri Basara Leads International School"
+        description="Meaningful, child-centred, and future-focused education from Nursery to Grade X with CBSE and State pathways, AI, Robotics, and IIT-JEE/NEET foundation."
         video="/assets/school/basara-school.mp4"
         ctaText="Apply Now"
         ctaHref="/school/admissions"
         secondaryCtaText="Explore Programs"
         secondaryCtaHref="/school/courses"
-        trustText="Join <strong>2000+</strong> Happy Students<br/>Building a Brighter Future"
+        trustText="Motto: <strong>LEARN. LEAD. EXCEL.</strong><br/>Every Child Deserves Excellence"
       />
 
       <SchoolAboutSection />
 
       <FeatureCards
         id="features"
-        title="Why Choose Sri Basara?"
-        description="We provide a perfect blend of academics, values, and extracurricular activities to bring out the best in every student."
+        title="Our Unique Learning Approach"
+        description="Blending strong academic foundations with modern methodologies, AI, robotics, competitive exam foundation, and value-based education."
         features={[
           {
             icon: 'Book',
-            title: 'Academic Excellence',
-            description: 'Innovative teaching methods and a structured curriculum that inspire learning.'
-          },
-          {
-            icon: 'User',
-            title: 'Holistic Development',
-            description: 'Focus on physical, emotional, social, and intellectual growth of every child.'
-          },
-          {
-            icon: 'Shield',
-            title: 'Safe & Nurturing Environment',
-            description: 'A secure campus where students feel valued, respected and motivated.'
+            title: 'Academic & Language Excellence',
+            description: 'Strong subject foundations, continuous assessment, and special focus on English communication, vocabulary, and reading.'
           },
           {
             icon: 'Star',
-            title: 'Extracurricular Activities',
-            description: 'Wide range of sports, arts, culture and leadership opportunities.'
+            title: 'AI, Robotics & STEM Education',
+            description: 'Hands-on learning through coding, robotics kits, scientific experiments, and our Makers Space Lab.'
+          },
+          {
+            icon: 'GraduationCap',
+            title: 'IIT-JEE & NEET Foundation',
+            description: 'Early exposure to analytical thinking, mathematical reasoning, mental ability, and competitive examination skills.'
+          },
+          {
+            icon: 'Trophy',
+            title: 'Sports & Life Skills',
+            description: 'Encouraging physical fitness, teamwork, discipline, emotional intelligence, and leadership through sports and games.'
           }
         ]}
       />
 
       <SplitShowcase
         id="academics"
-        tagline="Learning for Life"
-        title="Academics That Inspire"
-        description="Our curriculum is designed to stimulate curiosity, critical thinking and creativity. With well-equipped classrooms, digital learning tools and experienced faculty, we ensure every student excels."
+        tagline="LEARN. LEAD. EXCEL."
+        title="Future-Focused Learning Pathways"
+        description="Our educational approach blends strong academic foundations with modern teaching methodologies, technology-enabled learning, innovative activities, and value-based education from Nursery to Grade X."
         image="/assets/school/academics.png"
         list={[
-          'CBSE Aligned Curriculum',
-          'Smart Classrooms & Digital Learning',
-          'Well-Equipped Labs & Library',
-          'Personalized Attention'
+          'CBSE & State Curriculum Pathways',
+          'IIT-JEE & NEET Analytical Foundation',
+          'AI, Robotics & Makers Space STEM Lab',
+          'Arithmetic & Mental Ability Coaching'
         ]}
-        ctaText="Explore Academics"
+        ctaText="Explore Curriculum"
         ctaHref="/school/courses"
       />
 
       <SplitShowcase
         id="campus"
         reverse={true}
-        tagline="Beyond Classrooms"
-        title="Vibrant Campus Life"
-        description="From sports to cultural events, we encourage students to explore their interests, discover new talents and build lifelong friendships."
+        tagline="World-Class Infrastructure"
+        title="Our Learning Environment"
+        description="We provide a stimulating, supportive educational environment with smart classrooms, science and computer learning facilities, Makers Space Lab, sports grounds, and individual student mentoring."
         image="/assets/school/campus.png"
         iconGrid={[
-          { icon: 'Trophy', label: 'Sports' },
-          { icon: 'Star', label: 'Arts & Culture' },
-          { icon: 'Users', label: 'Clubs & Activities' },
-          { icon: 'User', label: 'Leadership' }
+          { icon: 'Trophy', label: 'Sports & Fitness' },
+          { icon: 'Star', label: 'Robotics & STEM' },
+          { icon: 'Users', label: 'Makers Space' },
+          { icon: 'User', label: 'Individual Mentoring' }
         ]}
         ctaText="Explore Facilities"
         ctaHref="/school/facilities"

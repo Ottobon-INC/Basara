@@ -90,7 +90,7 @@ export default function SchoolFaculty() {
               <span className="school-section-subtitle">Student-Centric Pedagogy</span>
               <h2>Nurturing Mentors, Not Just Instructors</h2>
               <p>
-                At Sri Basara Leads School, our teachers act as guides and mentors who understand that each child learns differently. By maintaining an optimal teacher-student ratio, we ensure that no child gets left behind.
+                At Sri Basara Leads International School, our teachers act as guides and mentors who understand that each child learns differently. By maintaining an optimal teacher-student ratio, we ensure that no child gets left behind.
               </p>
               <p>
                 Special remedial support is offered for students needing reinforcement in foundational subjects, while accelerated challenges are provided for students excelling in specific areas.

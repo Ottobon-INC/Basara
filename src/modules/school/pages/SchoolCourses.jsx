@@ -6,54 +6,54 @@ const ACADEMIC_LEVELS = [
   {
     grade: 'Pre-Primary / Kindergarten',
     subtitle: 'Nursery, LKG & UKG',
-    description: 'Foundational learning focused on sensory exploration, language acquisition, social confidence, and joyful creative play.',
+    description: 'Foundational learning focused on sensory exploration, phonics, early vocabulary, arithmetic readiness, and joyful play.',
     features: [
-      'Play-way and activity-based learning approach',
-      'Phonics, early vocabulary, and storytelling',
-      'Numeracy concepts through manipulatives and games',
-      'Color, craft, music, and motor skill enhancement',
-      'Caring and attentive teacher-to-student ratio'
+      'Child-centred, play-way and activity-based learning approach',
+      'English phonics, vocabulary building, and storytelling',
+      'Arithmetic & mental ability through manipulatives and games',
+      'Color, craft, motor skills, and sensory discovery',
+      'Safe, inclusive, joyful, and supportive learning environment'
     ],
-    highlight: 'Nurturing curiosity from day one'
+    highlight: 'Nurturing curiosity & individual talent from day one'
   },
   {
     grade: 'Primary School',
     subtitle: 'Grades 1 to 5',
-    description: 'Building strong fundamental competencies across literacy, numeracy, environmental sciences, and creative expression.',
+    description: 'Establishing solid foundations across languages, mathematics, environmental science, and creative critical thinking.',
     features: [
-      'Comprehensive CBSE-aligned curriculum',
-      'English, Mathematics, EVS / General Science & Social Studies',
-      'Second Language (Telugu / Hindi)',
-      'Smart classroom digital interactive sessions',
-      'Introduction to computer basics and library reading habits'
+      'CBSE and State curriculum pathways',
+      'English Language Development: vocabulary, writing, comprehension & spoken fluency',
+      'Arithmetic & mental ability: speed, numerical logic, and reasoning',
+      'Hands-on science experiments and introduction to coding & robotics',
+      'Smart classrooms, digital learning resources, and library reading sessions'
     ],
-    highlight: 'Solid foundation for independent thinking'
+    highlight: 'Building strong foundations in literacy, logic & science'
   },
   {
     grade: 'Middle School',
     subtitle: 'Grades 6 to 8',
-    description: 'Deepening analytical understanding, scientific inquiry, critical thinking, and disciplined study habits.',
+    description: 'Deepening analytical inquiry, conceptual understanding, competitive foundation, and disciplined study habits.',
     features: [
-      'Segregated sciences: Physics, Chemistry & Biology laboratory exposure',
-      'Advanced Mathematics with problem-solving focus',
-      'Social Sciences (History, Civics, Geography)',
-      'Information & Communication Technology (ICT) and coding basics',
-      'Early foundation coaching for Science & Math Olympiads'
+      'Early IIT-JEE & NEET foundation coaching and analytical reasoning',
+      'AI, Robotics, Coding & Makers Space Lab projects',
+      'Segregated sciences: Physics, Chemistry & Biology laboratory practice',
+      'Arithmetic & mental ability: competitive examination problem-solving',
+      'Life skills, communication skills, personality development & sports'
     ],
-    highlight: 'Fostering analytical and inquiry skills'
+    highlight: 'Fostering analytical thinking, AI innovation & inquiry'
   },
   {
     grade: 'Secondary School',
     subtitle: 'Grades 9 & 10',
-    description: 'Rigorous academic preparation for Board examinations coupled with specialized competitive foundation coaching.',
+    description: 'Rigorous Board examination preparation coupled with advanced IIT-JEE / NEET foundation coaching and career readiness.',
     features: [
-      'Targeted CBSE board examination preparation and syllabus mastery',
-      'Comprehensive laboratory practicals and project work',
-      'Integrated foundation coaching for IIT-JEE, NEET, and NTSE',
-      'Regular mock tests, continuous performance analysis, and remedial mentoring',
-      'Career orientation, guidance, and stress-management counseling'
+      'Targeted CBSE and State Board syllabus mastery and high scoring strategies',
+      'Intensive IIT-JEE & NEET foundation coaching by expert faculty',
+      'Hands-on STEM and science laboratory practicals and project work',
+      'Continuous assessments, mock test series, and personalized mentoring',
+      'Discipline, leadership development, and preparation for life beyond school'
     ],
-    highlight: 'Excellence in board & competitive examinations'
+    highlight: 'Board excellence, competitive readiness & leadership'
   }
 ];
 
@@ -63,10 +63,10 @@ export default function SchoolCourses() {
       {/* Inner Hero */}
       <section className="school-inner-hero">
         <div className="school-inner-hero-container">
-          <span className="school-inner-hero-tag">Academic Programs</span>
-          <h1 className="school-inner-hero-title">Curriculum & Courses</h1>
+          <span className="school-inner-hero-tag">SRI BASARA LEADS INTERNATIONAL SCHOOL</span>
+          <h1 className="school-inner-hero-title">Academic Programs (Nursery to Grade X)</h1>
           <p className="school-inner-hero-desc">
-            A progressive, CBSE-aligned academic pathway nurturing every student from early childhood through secondary graduation.
+            Discover Potential. Develop Excellence. Lead the Future. — CBSE & State curriculum pathways integrating AI, Robotics, STEM, and IIT-JEE/NEET foundation.
           </p>
         </div>
       </section>
@@ -114,33 +114,33 @@ export default function SchoolCourses() {
             <span className="school-section-subtitle">Beyond Textbooks</span>
             <h2 className="school-section-title">Co-Curricular Enrichment Programs</h2>
             <p className="school-section-desc">
-              Holistic growth encompasses creative arts, physical agility, scientific innovation, and interpersonal confidence.
+              Holistic growth encompasses AI innovation, physical agility, competitive reasoning, and interpersonal confidence.
             </p>
           </div>
 
           <div className="school-cards-grid-3">
             <div className="school-feature-box">
               <div className="school-feature-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"></rect><circle cx="12" cy="5" r="2"></circle><path d="M12 7v4"></path></svg>
               </div>
-              <h3>STEM & Robotics</h3>
-              <p>Hands-on experimentation introducing robotics, logical coding concepts, and real-world science models.</p>
+              <h3>AI, Robotics & Makers Space</h3>
+              <p>Hands-on learning through robotics kits, coding, scientific experiments, and maker innovation projects.</p>
             </div>
 
             <div className="school-feature-box">
               <div className="school-feature-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path></svg>
               </div>
-              <h3>Sports & Physical Fitness</h3>
-              <p>Daily physical education, yoga, athletics, cricket, football, and martial arts led by experienced coaches.</p>
+              <h3>Sports & Physical Education</h3>
+              <p>Encouraging physical fitness, teamwork, discipline, sportsmanship, and leadership through daily sports, cricket, and yoga.</p>
             </div>
 
             <div className="school-feature-box">
               <div className="school-feature-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
               </div>
-              <h3>Public Speaking & Arts</h3>
-              <p>Debates, elocution, theater, drawing, music, and dance programs fostering expressive eloquence.</p>
+              <h3>Life Skills & Personality Development</h3>
+              <p>Developing confidence, communication skills, emotional intelligence, creativity, collaboration, and social responsibility.</p>
             </div>
           </div>
         </div>
@@ -150,4 +150,3 @@ export default function SchoolCourses() {
     </>
   );
 }
-

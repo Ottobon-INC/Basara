@@ -135,7 +135,7 @@ export default function UmbrellaHome() {
             <div className="inst-card-content">
               <h3 className="inst-card-title">
                 <Link to="/school" style={{ textDecoration: 'none', color: 'inherit' }}>
-                  Sri Basara Leads School with International Standards
+                  Sri Basara Leads International School
                 </Link>
               </h3>
               <p className="inst-card-desc">A nurturing environment laying the critical foundation for lifelong learning and personal development.</p>

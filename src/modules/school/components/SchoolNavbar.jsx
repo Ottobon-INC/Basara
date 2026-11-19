@@ -82,10 +82,10 @@ export default function SchoolNavbar() {
         <div className="school-nav-container school-main-header-inner">
           {/* Logo on the left */}
           <div className="school-header-logo-wrap">
-            <Link to="/school" className="school-logo-link" aria-label="Sri Basara Leads School Home">
+            <Link to="/school" className="school-logo-link" aria-label="Sri Basara Leads International School Home">
               <img 
                 src="/assets/school/SRI BASARA.png" 
-                alt="Sri Basara Leads School" 
+                alt="Sri Basara Leads International School" 
                 className="school-site-logo" 
               />
             </Link>
@@ -148,7 +148,7 @@ export default function SchoolNavbar() {
         <div className="school-mobile-drawer-header">
           <img 
             src="/assets/school/SRI BASARA.png" 
-            alt="Sri Basara Leads School" 
+            alt="Sri Basara Leads International School" 
             className="school-mobile-drawer-logo" 
           />
           <button 

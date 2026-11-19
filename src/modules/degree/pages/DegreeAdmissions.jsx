@@ -94,7 +94,7 @@ export default function DegreeAdmissions() {
                     <option value="" disabled>-- Select Institution --</option>
                     <option value="Sri Basara Degree College">Sri Basara Degree College</option>
                     <option value="Sri Basara Junior College">Sri Basara Junior College</option>
-                    <option value="Sri Basara Leads School with International Standards">Sri Basara Leads School with International Standards</option>
+                    <option value="Sri Basara Leads International School">Sri Basara Leads International School</option>
                     <option value="Sri Basara Defence Academy">Sri Basara Defence Academy</option>
                   </select>
                 </div>

@@ -9,7 +9,7 @@ export default function SchoolContact() {
       <section className="school-inner-hero">
         <div className="school-inner-hero-container">
           <span className="school-inner-hero-tag">Get in Touch</span>
-          <h1 className="school-inner-hero-title">Contact Sri Basara Leads School</h1>
+          <h1 className="school-inner-hero-title">Contact Sri Basara Leads International School</h1>
           <p className="school-inner-hero-desc">
             We are here to answer your questions, arrange campus tours, and guide you through the enrollment process.
           </p>
