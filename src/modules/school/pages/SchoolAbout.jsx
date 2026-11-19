@@ -76,25 +76,29 @@ export default function SchoolAbout() {
         </div>
       </section>
 
-      {/* 2. Narrative Section */}
+      {/* 2. Message From The Management (Placed before Vision & Mission) */}
       <section className="school-page-section alt-bg">
         <div className="school-page-container">
-          <div className="school-narrative-grid">
-            <div className="school-narrative-text">
-              <span className="school-section-subtitle">Our Philosophy</span>
-              <h2>Nurturing Confident Learners & Future Leaders</h2>
-              <p>
-                <strong>Sri Basara Leads International School</strong> is committed to providing meaningful, child-centred, and future-focused education from Nursery to Grade X under CBSE and State curriculum pathways.
-              </p>
-              <p>
-                We believe that every child is unique and possesses tremendous potential. Our educational approach blends strong academic foundations with modern teaching methodologies, technology-enabled learning, AI, Robotics, and value-based character education.
-              </p>
-              <p style={{ fontStyle: 'italic', color: 'var(--color-primary, #302F7F)', fontWeight: 600 }}>
-                "We do not simply prepare students for examinations; we prepare them for life."
-              </p>
+          <div className="school-section-header" style={{ marginBottom: '35px' }}>
+            <span className="school-section-subtitle">Leadership</span>
+            <h2 className="school-section-title">Message From The Management</h2>
+          </div>
+
+          <div className="school-narrative-grid" style={{ alignItems: 'center' }}>
+            <div className="school-narrative-img-wrap" style={{ textAlign: 'center', maxWidth: '320px', margin: '0 auto' }}>
+              <img src="/assets/degree/11.jpeg" alt="Shri Pudi Ramesh Garu, Chairman" style={{ maxHeight: '320px', objectFit: 'contain', background: '#f8fafc' }} loading="lazy" />
             </div>
-            <div className="school-narrative-img-wrap">
-              <img src="/assets/school/collegge.png" alt="Sri Basara Leads International School Campus" loading="lazy" />
+            <div className="school-narrative-text">
+              <h2 style={{ fontSize: '24px', marginBottom: '6px' }}>Shri Pudi Ramesh Garu</h2>
+              <p style={{ color: 'var(--color-accent, #B95308)', fontWeight: 600, marginTop: '0', marginBottom: '1rem', fontSize: '0.95rem' }}>
+                Chairman, Sri Basara Educational Institutions
+              </p>
+              <p style={{ fontSize: '1rem', lineHeight: '1.65', marginBottom: '1rem' }}>
+                "At Sri Basara Leads International School, our commitment is to provide every child with an atmosphere where dreams take flight and values anchor character. We believe true education does not merely train students to pass exams, but inspires them to face the future with confidence, wisdom, and moral courage."
+              </p>
+              <p style={{ fontSize: '0.92rem', color: '#64748b', fontStyle: 'italic', margin: 0 }}>
+                Every Child Has Potential. Every Learner Deserves Excellence.
+              </p>
             </div>
           </div>
         </div>
@@ -198,34 +202,6 @@ export default function SchoolAbout() {
                 <p style={{ fontSize: '0.9rem', lineHeight: '1.55', margin: 0 }}>{pillar.desc}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 5. Message From The Management */}
-      <section className="school-page-section">
-        <div className="school-page-container">
-          <div className="school-section-header" style={{ marginBottom: '35px' }}>
-            <span className="school-section-subtitle">Leadership</span>
-            <h2 className="school-section-title">Message From The Management</h2>
-          </div>
-
-          <div className="school-narrative-grid" style={{ alignItems: 'center' }}>
-            <div className="school-narrative-img-wrap" style={{ textAlign: 'center', maxWidth: '320px', margin: '0 auto' }}>
-              <img src="/assets/degree/11.jpeg" alt="Shri Pudi Ramesh Garu, Chairman" style={{ maxHeight: '320px', objectFit: 'contain', background: '#f8fafc' }} loading="lazy" />
-            </div>
-            <div className="school-narrative-text">
-              <h2 style={{ fontSize: '24px', marginBottom: '6px' }}>Shri Pudi Ramesh Garu</h2>
-              <p style={{ color: 'var(--color-accent, #B95308)', fontWeight: 600, marginTop: '0', marginBottom: '1rem', fontSize: '0.95rem' }}>
-                Chairman, Sri Basara Educational Institutions
-              </p>
-              <p style={{ fontSize: '1rem', lineHeight: '1.65', marginBottom: '1rem' }}>
-                "At Sri Basara Leads International School, our commitment is to provide every child with an atmosphere where dreams take flight and values anchor character. We believe true education does not merely train students to pass exams, but inspires them to face the future with confidence, wisdom, and moral courage."
-              </p>
-              <p style={{ fontSize: '0.92rem', color: '#64748b', fontStyle: 'italic', margin: 0 }}>
-                Every Child Has Potential. Every Learner Deserves Excellence.
-              </p>
-            </div>
           </div>
         </div>
       </section>
