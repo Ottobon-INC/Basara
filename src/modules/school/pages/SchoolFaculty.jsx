@@ -704,10 +704,10 @@ export default function SchoolFaculty() {
               <span className="school-section-subtitle">Student-Centric Pedagogy</span>
               <h2>Nurturing Mentors, Not Just Instructors</h2>
               <p>
-                At <strong>Sri Basara Leads International School</strong>, our educators act as guides and mentors who understand that each child learns differently. By maintaining an optimal teacher-student ratio, we ensure that every learner receives personalized attention and encouragement.
+                At <strong>Sri Basara Leads International School</strong>, our teachers mentor each child with personalized care through an optimal teacher-student ratio.
               </p>
               <p>
-                Special remedial care is provided for students needing extra clarity in fundamental subjects, while competitive challenges and analytical exposure are curated for students aspiring towards IIT-JEE, NEET, and Olympiads.
+                We combine strong foundational support with early IIT-JEE, NEET, and Olympiad training to empower every student's future.
               </p>
             </div>
             <div className="school-narrative-img-wrap">
