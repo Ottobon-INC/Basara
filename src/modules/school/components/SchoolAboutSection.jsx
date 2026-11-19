@@ -49,7 +49,7 @@ export default function SchoolAboutSection() {
             </div>
             <div className="sa-stat-divider"></div>
             <div className="sa-stat-inline">
-              <strong>7 Pillars</strong>
+              <strong>6 Pillars</strong>
               <span>Learning Approach</span>
             </div>
           </div>
@@ -64,7 +64,7 @@ export default function SchoolAboutSection() {
             Blending strong conceptual foundations with AI, Robotics, and value-based education, we do not simply prepare students for examinations; we prepare them for life.
           </p>
           <Link to="/school/about" className="sa-link">
-            Explore our Vision, Mission & 7-Pillar Learning Approach
+            Explore our Vision, Mission & 6-Pillar Learning Approach
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </Link>
         </div>

@@ -79,19 +79,6 @@ const UNIQUE_APPROACHES = [
         <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path>
       </svg>
     )
-  },
-  {
-    num: '07',
-    title: 'Life Skills & Personality Development',
-    desc: 'Developing confidence, communication, emotional intelligence, creativity, collaboration, and social responsibility.',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10"></circle>
-        <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-        <line x1="9" y1="9" x2="9.01" y2="9"></line>
-        <line x1="15" y1="9" x2="15.01" y2="9"></line>
-      </svg>
-    )
   }
 ];
 
@@ -250,14 +237,14 @@ export default function SchoolAbout() {
         </div>
       </section>
 
-      {/* 4. Our Unique Learning Approach (All 7 Pillars) */}
+      {/* 4. Our Unique Learning Approach (6 Pillars) */}
       <section className="school-page-section alt-bg">
         <div className="school-page-container">
           <div className="school-section-header">
             <span className="school-section-subtitle">Holistic Framework</span>
             <h2 className="school-section-title">Our Unique Learning Approach</h2>
             <p className="school-section-desc">
-              Seven foundational pillars preparing students with strong academic mastery, analytical thinking, and life skills.
+              Six foundational pillars preparing students with strong academic mastery, analytical thinking, and future-ready skills.
             </p>
           </div>
 
