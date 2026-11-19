@@ -1,0 +1,493 @@
+/* ==========================================================================
+   SRI BASARA DEFENCE ACADEMY - DEDICATED INDEPENDENT NAVBAR STYLES
+   Colors: Vibrant Academy Green (#15803d), Courage Orange (#ea580c), White (#ffffff)
+   Font: Plus Jakarta Sans & Inter
+   ========================================================================== */
+
+:root {
+  --da-nav-green: #15803d;
+  --da-nav-green-dark: #166534;
+  --da-nav-orange: #ea580c;
+  --da-nav-orange-hover: #c2410c;
+  --da-nav-white: #ffffff;
+  --da-nav-text-dark: #0f172a;
+}
+
+/* Shared container */
+.da-nav-container {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   1. TOP INFORMATION BAR
+   -------------------------------------------------------------------------- */
+.da-top-bar {
+  background-color: var(--da-nav-green-dark);
+  color: var(--da-nav-white);
+  padding: 0.5rem 0;
+  font-size: 0.85rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.da-top-bar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+}
+
+.da-back-hub-link {
+  color: var(--da-nav-white);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.da-back-hub-link:hover {
+  opacity: 0.95;
+  transform: translateX(-2px);
+  color: #fde047;
+}
+
+.da-top-contact-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.da-top-contact-link {
+  color: var(--da-nav-white);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+}
+
+.da-top-contact-link:hover {
+  color: #fde047;
+}
+
+/* --------------------------------------------------------------------------
+   2. MAIN NAVIGATION BAR
+   -------------------------------------------------------------------------- */
+.da-main-header {
+  background-color: var(--da-nav-white);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 14px rgba(21, 128, 61, 0.08);
+  border-bottom: 2px solid rgba(21, 128, 61, 0.12);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.da-main-header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 0.65rem;
+  padding-bottom: 0.65rem;
+}
+
+/* Logo */
+.da-header-logo-wrap {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.da-logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.da-site-logo {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Desktop Navigation Menu */
+.da-desktop-nav {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.da-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.da-nav-item-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0.5rem 0.65rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334155;
+  text-decoration: none;
+  border-radius: 6px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.da-nav-item-link:hover {
+  color: var(--da-nav-green);
+  background-color: rgba(21, 128, 61, 0.06);
+}
+
+.da-nav-item-link.active {
+  color: var(--da-nav-green);
+  background-color: rgba(21, 128, 61, 0.08);
+  font-weight: 700;
+}
+
+.da-nav-item-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 12px;
+  right: 12px;
+  height: 3px;
+  background-color: var(--da-nav-orange);
+  border-radius: 2px;
+}
+
+/* Institutions Dropdown Menu in Desktop */
+.da-nav-dropdown {
+  position: relative;
+}
+
+.da-nav-dropdown-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.da-nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 240px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  border: 1px solid #e2e8f0;
+  padding: 8px 0;
+  display: none;
+  flex-direction: column;
+  z-index: 200;
+}
+
+.da-nav-dropdown:hover .da-nav-dropdown-menu {
+  display: flex;
+}
+
+.da-nav-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #334155;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.da-nav-dropdown-item:hover {
+  background-color: #f1f5f9;
+  color: var(--da-nav-green);
+}
+
+/* Right Actions (CTA & Mobile Button) */
+.da-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.da-apply-btn {
+  background-color: var(--da-nav-orange);
+  color: var(--da-nav-white);
+  padding: 0.55rem 1.25rem;
+  border-radius: 6px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.25);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.da-apply-btn:hover {
+  background-color: var(--da-nav-orange-hover);
+  color: var(--da-nav-white);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(234, 88, 12, 0.35);
+}
+
+/* Mobile Hamburger Toggle */
+.da-mobile-toggle-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid #cbd5e1;
+  padding: 0.45rem;
+  border-radius: 6px;
+  color: var(--da-nav-green-dark);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.da-mobile-toggle-btn:hover {
+  background-color: #f1f5f9;
+}
+
+/* --------------------------------------------------------------------------
+   3. RESPONSIVE MOBILE DRAWER
+   -------------------------------------------------------------------------- */
+.da-mobile-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(2px);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.da-mobile-drawer-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.da-mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 86%;
+  max-width: 380px;
+  background-color: #ffffff;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: -6px 0 24px rgba(0, 0, 0, 0.15);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-y: auto;
+}
+
+.da-mobile-drawer.open {
+  transform: translateX(0);
+}
+
+.da-mobile-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 1.4rem;
+  border-bottom: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.da-mobile-drawer-logo {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+}
+
+.da-mobile-close-btn {
+  background: none;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 0.4rem;
+  color: #475569;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.da-mobile-close-btn:hover {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.da-mobile-nav-body {
+  padding: 1.2rem 1.4rem 2rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex-grow: 1;
+}
+
+.da-mobile-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.da-mobile-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.da-mobile-nav-link .da-mobile-icon {
+  font-size: 1.25rem;
+  width: 26px;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.da-mobile-nav-link:hover,
+.da-mobile-nav-link.active {
+  color: var(--da-nav-green);
+  background-color: rgba(21, 128, 61, 0.08);
+}
+
+/* Mobile Institutions Accordion */
+.da-mobile-institutions-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.da-mobile-institutions-title {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.4rem 0.6rem;
+}
+
+.da-mobile-inst-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.55rem 0.6rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #334155;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.15s ease;
+}
+
+.da-mobile-inst-item:hover {
+  background: rgba(21, 128, 61, 0.08);
+  color: var(--da-nav-green);
+}
+
+.da-mobile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: auto;
+  padding-top: 1.2rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.da-mobile-apply-btn {
+  display: block;
+  text-align: center;
+  background-color: var(--da-nav-orange);
+  color: var(--da-nav-white);
+  padding: 0.85rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.25);
+}
+
+.da-mobile-hub-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--da-nav-green-dark);
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   4. BREAKPOINTS
+   -------------------------------------------------------------------------- */
+@media (max-width: 1100px) {
+  .da-nav-item-link {
+    padding: 0.45rem 0.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .da-desktop-nav {
+    display: none;
+  }
+  .da-apply-btn {
+    display: none;
+  }
+  .da-mobile-toggle-btn {
+    display: flex;
+  }
+}
+
+@media (max-width: 640px) {
+  .da-top-contact-info {
+    display: none;
+  }
+  .da-top-bar-inner {
+    justify-content: center;
+  }
+}

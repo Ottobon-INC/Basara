@@ -2,6 +2,23 @@ import React, { useEffect, useRef } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import './MobileNav.css';
 
+const getMobileIcon = (label) => {
+  const l = (label || '').toLowerCase();
+  if (l.includes('home')) return '🏠';
+  if (l.includes('institution')) return '🏫';
+  if (l.includes('academic') || l.includes('course') || l.includes('program')) return '📚';
+  if (l.includes('achievement')) return '🏆';
+  if (l.includes('admission')) return '📝';
+  if (l.includes('gallery')) return '🖼️';
+  if (l.includes('transport')) return '🚌';
+  if (l.includes('contact')) return '📞';
+  if (l.includes('faculty')) return '👨‍🏫';
+  if (l.includes('facilit')) return '🏢';
+  if (l.includes('about')) return '🏛️';
+  if (l.includes('chairman')) return '✍️';
+  return '•';
+};
+
 export default function MobileNav({ isOpen, onClose, links, logo }) {
   const overlayRef = useRef(null);
   const closeBtnRef = useRef(null);
@@ -61,11 +78,13 @@ export default function MobileNav({ isOpen, onClose, links, logo }) {
             <li key={idx}>
               {link.isPlaceholder ? (
                 <span className="mobile-nav-placeholder">
+                  <span style={{ marginRight: '10px', fontSize: '1.2rem' }}>{getMobileIcon(link.label)}</span>
                   {link.label} ({link.placeholderTitle})
                 </span>
               ) : link.path.includes('#') ? (
-                <a href={link.path} className="mobile-nav-link" onClick={onClose}>
-                  {link.label}
+                <a href={link.path} className="mobile-nav-link" onClick={onClose} style={{ display: 'flex', alignItems: 'center' }}>
+                  <span style={{ marginRight: '10px', fontSize: '1.2rem' }}>{getMobileIcon(link.label)}</span>
+                  <span>{link.label}</span>
                 </a>
               ) : (
                 <NavLink 
@@ -73,8 +92,10 @@ export default function MobileNav({ isOpen, onClose, links, logo }) {
                   end={link.path.endsWith('/') || link.path.endsWith('degree') || link.path.endsWith('school') || link.path.endsWith('juniorcollege') || link.path.endsWith('defenseacademy')}
                   className={({ isActive }) => `mobile-nav-link ${isActive ? 'active' : ''}`}
                   onClick={onClose}
+                  style={{ display: 'flex', alignItems: 'center' }}
                 >
-                  {link.label}
+                  <span style={{ marginRight: '10px', fontSize: '1.2rem' }}>{getMobileIcon(link.label)}</span>
+                  <span>{link.label}</span>
                 </NavLink>
               )}
             </li>

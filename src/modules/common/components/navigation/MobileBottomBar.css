@@ -1,0 +1,81 @@
+/* ==========================================================================
+   MOBILE FIXED BOTTOM BAR
+   ☎️ Call | WhatsApp | Enquiry | Apply
+   ========================================================================== */
+
+.mobile-bottom-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-bottom-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: #ffffff;
+    box-shadow: 0 -3px 16px rgba(0, 0, 0, 0.12);
+    border-top: 1px solid #e2e8f0;
+    z-index: 998;
+    align-items: stretch;
+    justify-content: space-around;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .mobile-bottom-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    text-decoration: none;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #475569;
+    padding: 6px 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mobile-bottom-item:active {
+    background-color: #f1f5f9;
+  }
+
+  .mobile-bottom-item svg {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Specific accents */
+  .mobile-bottom-item.item-call {
+    color: #0284c7;
+  }
+
+  .mobile-bottom-item.item-whatsapp {
+    color: #16a34a;
+  }
+
+  .mobile-bottom-item.item-enquiry {
+    color: var(--color-accent, #ea580c);
+  }
+
+  .mobile-bottom-item.item-apply {
+    color: var(--color-primary, #15803d);
+    background: rgba(21, 128, 61, 0.06);
+    border-radius: 6px;
+    margin: 4px 6px;
+  }
+
+  /* When body needs extra bottom space on mobile so content isn't covered */
+  body.has-mobile-bar {
+    padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+  }
+}

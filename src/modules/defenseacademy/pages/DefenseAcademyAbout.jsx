@@ -215,7 +215,7 @@ export default function DefenseAcademyAbout() {
                   <circle cx="12" cy="12" r="6"></circle>
                   <circle cx="12" cy="12" r="2"></circle>
                 </svg>
-                <h3 className="defense-card-title" style={{ color: 'var(--color-primary, #14532d)' }}>
+                <h3 className="defense-card-title" style={{ color: 'var(--color-primary, #15803d)' }}>
                   Our Mission
                 </h3>
               </div>

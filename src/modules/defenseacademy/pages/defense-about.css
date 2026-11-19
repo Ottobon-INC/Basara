@@ -1,11 +1,12 @@
 /* ==========================================================================
    SRI BASARA DEFENCE ACADEMY - ABOUT US PAGE CSS
-   Theme: Military Green (#14532d) & Courage Orange (#ea580c)
+   Theme: Vibrant Military Academy Green (#15803d) & Courage Orange (#ea580c)
+   Typography: Plus Jakarta Sans & Inter Modern Sans-Serif
    ========================================================================== */
 
 /* 1. Inner Hero */
 .defense-inner-hero {
-  background: linear-gradient(135deg, #14532d 0%, #064e3b 50%, #022c22 100%);
+  background: linear-gradient(135deg, #15803d 0%, #15803d 50%, #1b8048 100%);
   color: #ffffff;
   padding: 80px 20px 85px 20px;
   text-align: center;
@@ -21,8 +22,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: radial-gradient(circle at 20% 30%, rgba(234, 88, 12, 0.15) 0%, transparent 50%),
-                    radial-gradient(circle at 80% 70%, rgba(20, 83, 45, 0.3) 0%, transparent 60%);
+  background-image: radial-gradient(circle at 20% 30%, rgba(234, 88, 12, 0.2) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 70%, rgba(34, 197, 94, 0.25) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -35,8 +36,8 @@
 
 .defense-inner-hero-tag {
   display: inline-block;
-  background: rgba(234, 88, 12, 0.2);
-  border: 1px solid rgba(234, 88, 12, 0.6);
+  background: rgba(234, 88, 12, 0.25);
+  border: 1px solid rgba(234, 88, 12, 0.7);
   color: #fed7aa;
   font-size: 0.8rem;
   font-weight: 700;
@@ -48,7 +49,7 @@
 }
 
 .defense-inner-hero-title {
-  font-family: var(--font-heading, serif);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 2.8rem;
   font-weight: 800;
   color: #ffffff;
@@ -124,10 +125,10 @@
 }
 
 .defense-section-title {
-  font-family: var(--font-heading, serif);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 2.2rem;
   font-weight: 800;
-  color: var(--color-primary, #14532d);
+  color: var(--color-primary, #15803d);
   margin: 0 0 14px 0;
   line-height: 1.25;
 }
@@ -173,9 +174,9 @@
 }
 
 .defense-narrative-text h2 {
-  font-family: var(--font-heading, serif);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 28px;
-  color: var(--color-primary, #14532d);
+  color: var(--color-primary, #15803d);
   margin: 0 0 8px 0;
   line-height: 1.25;
 }
@@ -204,7 +205,7 @@
 
 .defense-quote-motto {
   font-size: 0.98rem;
-  color: var(--color-primary, #14532d);
+  color: var(--color-primary, #15803d);
   font-weight: 700;
   font-style: italic;
   margin: 0;
@@ -218,7 +219,7 @@
 }
 
 .defense-vision-card {
-  background: linear-gradient(135deg, #14532d 0%, #064e3b 100%);
+  background: linear-gradient(135deg, #166534 0%, #15803d 100%);
   border-radius: 16px;
   padding: 36px 32px;
   color: #ffffff;
@@ -234,7 +235,7 @@
   border-radius: 16px;
   padding: 36px 32px;
   border: 1px solid #e2e8f0;
-  border-left: 6px solid var(--color-primary, #14532d);
+  border-left: 6px solid var(--color-primary, #15803d);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
@@ -249,7 +250,7 @@
 }
 
 .defense-card-title {
-  font-family: var(--font-heading, serif);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 32px;
   font-weight: 800;
   margin: 0;
@@ -324,7 +325,7 @@
   height: 48px;
   border-radius: 12px;
   background: rgba(20, 83, 45, 0.08);
-  color: var(--color-primary, #14532d);
+  color: var(--color-primary, #15803d);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -332,12 +333,12 @@
 }
 
 .defense-approach-card:hover .defense-approach-icon {
-  background: var(--color-primary, #14532d);
+  background: var(--color-primary, #15803d);
   color: #ffffff;
 }
 
 .defense-pillar-num {
-  font-family: var(--font-heading, serif);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 1.4rem;
   font-weight: 800;
   color: var(--color-accent, #ea580c);
@@ -365,7 +366,7 @@
 /* Capstone Pillar 07 Banner */
 .defense-capstone-card {
   margin-top: 24px;
-  background: linear-gradient(135deg, #14532d 0%, #064e3b 100%);
+  background: linear-gradient(135deg, #166534 0%, #15803d 100%);
   border-radius: 16px;
   padding: 30px 36px;
   color: #ffffff;
@@ -474,7 +475,7 @@
   height: 210px;
   width: 100%;
   overflow: hidden;
-  background: #064e3b;
+  background: #166534;
   position: relative;
 }
 
@@ -510,7 +511,7 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1.22rem;
   font-weight: 800;
-  color: var(--color-primary, #14532d);
+  color: var(--color-primary, #15803d);
   margin: 0 0 8px 0;
 }
 
@@ -540,14 +541,14 @@
   left: 0;
   right: 0;
   height: 5px;
-  background: linear-gradient(90deg, #14532d 0%, #ea580c 50%, #14532d 100%);
+  background: linear-gradient(90deg, #15803d 0%, #ea580c 50%, #15803d 100%);
 }
 
 .defense-commitment-quote {
-  font-family: var(--font-heading, serif);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 1.45rem;
   font-style: italic;
-  color: var(--color-primary, #14532d);
+  color: var(--color-primary, #15803d);
   margin: 20px 0;
   line-height: 1.5;
 }
@@ -559,7 +560,7 @@
 
 /* 8. Call to Action Banner */
 .defense-cta-section {
-  background: linear-gradient(135deg, #14532d 0%, #064e3b 100%);
+  background: linear-gradient(135deg, #166534 0%, #15803d 100%);
   color: #ffffff;
   padding: 60px 20px;
   text-align: center;
@@ -571,7 +572,7 @@
 }
 
 .defense-cta-title {
-  font-family: var(--font-heading, serif);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 2.2rem;
   font-weight: 800;
   margin: 0 0 12px 0;

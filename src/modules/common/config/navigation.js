@@ -37,9 +37,12 @@ export const navigation = {
   defenseacademy: [
     { label: 'Home', path: '/defenseacademy', isPlaceholder: false },
     { label: 'About Us', path: '/defenseacademy/about', isPlaceholder: false },
-    { label: 'Training Programs', path: '/defenseacademy#programs', isPlaceholder: false },
-    { label: 'Facilities', path: '/defenseacademy#facilities', isPlaceholder: false },
-    { label: 'Admissions', path: '/defenseacademy#admissions', isPlaceholder: false },
-    { label: 'Contact', path: '/defenseacademy#contact', isPlaceholder: false }
+    { label: 'Academics', path: '/defenseacademy/academics', isPlaceholder: false },
+    { label: 'Facilities', path: '/defenseacademy/facilities', isPlaceholder: false },
+    { label: 'Achievements', path: '/defenseacademy/achievements', isPlaceholder: false },
+    { label: 'Admissions', path: '/defenseacademy/admissions', isPlaceholder: false },
+    { label: 'Gallery', path: '/defenseacademy/gallery', isPlaceholder: false },
+    { label: 'Transport', path: '/defenseacademy/transport', isPlaceholder: false },
+    { label: 'Contact Us', path: '/defenseacademy/contact', isPlaceholder: false }
   ]
 };

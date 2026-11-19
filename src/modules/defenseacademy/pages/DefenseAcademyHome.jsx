@@ -20,9 +20,9 @@ export default function DefenseAcademyHome() {
           "/assets/defenseacademy/basara defnse jumping.png"
         ]}
         ctaText="Enquire Now"
-        ctaHref="#admissions"
-        secondaryCtaText="Our Programs"
-        secondaryCtaHref="#programs"
+        ctaHref="/defenseacademy/admissions"
+        secondaryCtaText="Our Academics"
+        secondaryCtaHref="/defenseacademy/academics"
         trustText="Join <strong>500+</strong> Cadets<br/>Serving the Nation with Pride"
       />
 
@@ -40,8 +40,8 @@ export default function DefenseAcademyHome() {
         tagline="OUR TRAINING PROGRAMS"
         title="Pathways to Serve the Nation"
         description="Comprehensive training for various defense forces and government services."
-        ctaText="View All Programs"
-        ctaHref="#programs"
+        ctaText="Explore Academics & Programs"
+        ctaHref="/defenseacademy/academics"
         programs={[
           {
             icon: 'Shield',
@@ -109,8 +109,8 @@ export default function DefenseAcademyHome() {
         id="admissions"
         title="Admissions Open for 2026–27"
         description="Start your journey to serve the nation with pride."
-        ctaText="Enquire Now"
-        ctaHref="#admissions"
+        ctaText="Apply / Enquire Now"
+        ctaHref="/defenseacademy/admissions"
         bgImage="/assets/defenseacademy/basara defense running.png"
       />
     </div>

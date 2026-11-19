@@ -1,0 +1,518 @@
+/* ==========================================================================
+   SRI BASARA DEFENCE ACADEMY - INNER PAGES SHARED STYLESHEET
+   Colors: Vibrant Academy Green (#15803d), Courage Orange (#ea580c), Slate (#0f172a)
+   Typography: Plus Jakarta Sans (Headings) & Inter (Body)
+   ========================================================================== */
+
+/* 1. Inner Hero Banner */
+.da-inner-hero {
+  background: linear-gradient(135deg, #14532d 0%, #15803d 50%, #1b8048 100%);
+  color: #ffffff;
+  padding: 70px 5%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 4px solid var(--color-accent, #ea580c);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.da-inner-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 20% 30%, rgba(234, 88, 12, 0.2) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 70%, rgba(34, 197, 94, 0.2) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.da-inner-hero-container {
+  max-width: 860px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.da-inner-hero-tag {
+  display: inline-block;
+  background: rgba(234, 88, 12, 0.25);
+  border: 1px solid rgba(234, 88, 12, 0.7);
+  color: #fed7aa;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 5px 16px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+.da-inner-hero-title {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin: 0 0 14px 0;
+  line-height: 1.25;
+}
+
+.da-inner-hero-desc {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.1rem;
+  line-height: 1.65;
+  max-width: 720px;
+  margin: 0 auto;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* 2. Page Section Containers */
+.da-page-section {
+  padding: 65px 5%;
+  background-color: #f8fafc;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.da-page-section.alt-bg {
+  background-color: #ffffff;
+}
+
+.da-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.da-section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 46px auto;
+}
+
+.da-section-subtitle {
+  display: inline-block;
+  color: var(--color-accent, #ea580c);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 8px;
+}
+
+.da-section-title {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--color-primary, #15803d);
+  font-size: clamp(1.8rem, 3.5vw, 2.3rem);
+  font-weight: 800;
+  margin: 0 0 12px 0;
+  line-height: 1.25;
+}
+
+.da-section-desc {
+  font-size: 1.02rem;
+  color: #475569;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* 3. Academics Cards Grid */
+.da-academics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 26px;
+}
+
+.da-academic-card {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  padding: 28px 26px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.da-academic-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary, #15803d);
+  box-shadow: 0 12px 28px rgba(21, 128, 61, 0.12);
+}
+
+.da-academic-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.da-academic-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(21, 128, 61, 0.09);
+  color: var(--color-primary, #15803d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.da-academic-badge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--color-accent, #ea580c);
+  background: rgba(234, 88, 12, 0.1);
+  padding: 4px 10px;
+  border-radius: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.da-academic-title {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 1.28rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 10px 0;
+}
+
+.da-academic-desc {
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: #475569;
+  margin: 0 0 18px 0;
+  flex-grow: 1;
+}
+
+.da-academic-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 14px;
+}
+
+.da-academic-point-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: #334155;
+  line-height: 1.45;
+}
+
+.da-academic-point-item svg {
+  flex-shrink: 0;
+  color: var(--color-primary, #15803d);
+  margin-top: 3px;
+}
+
+/* 4. Facilities Grid */
+.da-facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 26px;
+}
+
+.da-facility-card {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+}
+
+.da-facility-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(21, 128, 61, 0.12);
+  border-color: var(--color-primary, #15803d);
+}
+
+.da-facility-img-wrap {
+  height: 220px;
+  width: 100%;
+  overflow: hidden;
+  background: #166534;
+  position: relative;
+}
+
+.da-facility-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.da-facility-card:hover .da-facility-img-wrap img {
+  transform: scale(1.05);
+}
+
+.da-facility-body {
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.da-facility-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent, #ea580c);
+  margin-bottom: 6px;
+}
+
+.da-facility-title {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 8px 0;
+}
+
+.da-facility-desc {
+  font-size: 0.92rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 5. Achievements Grid */
+.da-achievements-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.da-achievement-stat-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 20px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.da-stat-number {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-primary, #15803d);
+  margin-bottom: 4px;
+}
+
+.da-stat-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* 6. Admissions Steps */
+.da-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.da-step-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 30px 24px;
+  border: 1px solid #e2e8f0;
+  position: relative;
+  border-top: 4px solid var(--color-primary, #15803d);
+}
+
+.da-step-num {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--color-primary, #15803d);
+  color: #ffffff;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+}
+
+/* 7. Gallery Grid */
+.da-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.da-gallery-item {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  height: 240px;
+  position: relative;
+  background: #166534;
+}
+
+.da-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.da-gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+.da-gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 16px 12px 16px;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+/* 8. Transport Routes Grid */
+.da-routes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.da-route-card {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  padding: 26px 24px;
+  border-left: 5px solid var(--color-accent, #ea580c);
+}
+
+.da-route-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 8px 0;
+}
+
+.da-route-points {
+  font-size: 0.92rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* 9. Contact Section */
+.da-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+}
+
+.da-contact-card {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  padding: 32px 28px;
+}
+
+/* 10. Call to Action Banner */
+.da-cta-banner {
+  background: linear-gradient(135deg, #166534 0%, #15803d 100%);
+  border-radius: 16px;
+  padding: 48px 36px;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 10px 28px rgba(21, 128, 61, 0.2);
+  margin-top: 50px;
+}
+
+.da-cta-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+}
+
+.da-cta-desc {
+  font-size: 1.05rem;
+  color: #e2e8f0;
+  max-width: 650px;
+  margin: 0 auto 24px auto;
+  line-height: 1.6;
+}
+
+.da-cta-btns {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.da-btn-primary {
+  background: var(--color-accent, #ea580c);
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.3);
+  transition: all 0.2s ease;
+}
+
+.da-btn-primary:hover {
+  background: #c2410c;
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+.da-btn-secondary {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+  padding: 12px 26px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.da-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+/* 11. Responsive Breakpoints */
+@media (max-width: 860px) {
+  .da-achievements-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .da-contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 580px) {
+  .da-achievements-stats {
+    grid-template-columns: 1fr;
+  }
+  .da-cta-banner {
+    padding: 36px 20px;
+  }
+}

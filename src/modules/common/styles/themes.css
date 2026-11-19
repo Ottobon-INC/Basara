@@ -31,12 +31,17 @@
 }
 
 /* 
-  Defense Academy Theme (Camouflage, Disciplined)
+  Defense Academy Theme (Disciplined, Energetic Academy Green & Amber)
 */
 .theme-defense,
 .theme-da {
-  --color-primary: #14532d; /* Military Green */
-  --color-accent: #ea580c; /* Orange accent */
+  --color-primary: #15803d; /* Vibrant prestigious military green (replaces overly dark #14532d) */
+  --color-primary-dark: #166534;
+  --color-primary-light: #22c55e;
+  --color-accent: #ea580c; /* Courage Orange */
+  --color-accent-amber: #d97706;
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --theme-bg-pattern: url('/assets/defenseacademy/camo_pattern.jpg');
 }
 

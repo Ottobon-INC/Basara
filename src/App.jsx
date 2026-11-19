@@ -26,8 +26,16 @@ import SchoolGallery from './modules/school/pages/SchoolGallery';
 import SchoolContact from './modules/school/pages/SchoolContact';
 
 import JuniorCollegeHome from './modules/juniorcollege/pages/JuniorCollegeHome';
+import DefenseAcademyLayout from './modules/defenseacademy/layouts/DefenseAcademyLayout';
 import DefenseAcademyHome from './modules/defenseacademy/pages/DefenseAcademyHome';
 import DefenseAcademyAbout from './modules/defenseacademy/pages/DefenseAcademyAbout';
+import DefenseAcademyAcademics from './modules/defenseacademy/pages/DefenseAcademyAcademics';
+import DefenseAcademyFacilities from './modules/defenseacademy/pages/DefenseAcademyFacilities';
+import DefenseAcademyAchievements from './modules/defenseacademy/pages/DefenseAcademyAchievements';
+import DefenseAcademyAdmissions from './modules/defenseacademy/pages/DefenseAcademyAdmissions';
+import DefenseAcademyGallery from './modules/defenseacademy/pages/DefenseAcademyGallery';
+import DefenseAcademyTransport from './modules/defenseacademy/pages/DefenseAcademyTransport';
+import DefenseAcademyContact from './modules/defenseacademy/pages/DefenseAcademyContact';
 
 function App() {
   return (
@@ -66,9 +74,16 @@ function App() {
           <Route index element={<JuniorCollegeHome />} />
         </Route>
         
-        <Route path="/defenseacademy" element={<InstitutionLayout institutionId="defenseacademy" />}>
+        <Route path="/defenseacademy" element={<DefenseAcademyLayout />}>
           <Route index element={<DefenseAcademyHome />} />
           <Route path="about" element={<DefenseAcademyAbout />} />
+          <Route path="academics" element={<DefenseAcademyAcademics />} />
+          <Route path="facilities" element={<DefenseAcademyFacilities />} />
+          <Route path="achievements" element={<DefenseAcademyAchievements />} />
+          <Route path="admissions" element={<DefenseAcademyAdmissions />} />
+          <Route path="gallery" element={<DefenseAcademyGallery />} />
+          <Route path="transport" element={<DefenseAcademyTransport />} />
+          <Route path="contact" element={<DefenseAcademyContact />} />
         </Route>
       </Routes>
     </BrowserRouter>
