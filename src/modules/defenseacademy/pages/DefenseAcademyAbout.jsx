@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './defense-about.css';
 
-// 7 Core Training Pillars
-const DEFENCE_APPROACHES = [
+// 6 Core Training Pillars (Grid of 3x2)
+const CORE_PILLARS = [
   {
     num: '01',
     title: 'Defence Career Orientation',
     desc: 'Comprehensive guidance and career pathway mapping across the Indian Army, Navy, Air Force, Coast Guard, and Paramilitary forces.',
     icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10"></circle>
         <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
       </svg>
@@ -20,7 +20,7 @@ const DEFENCE_APPROACHES = [
     title: 'NDA Preparation',
     desc: 'Rigorous academic coaching for National Defence Academy entrance with dedicated focus on Mathematics, General Ability, and English.',
     icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
         <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
       </svg>
@@ -31,12 +31,11 @@ const DEFENCE_APPROACHES = [
     title: 'Written Examination Preparation',
     desc: 'Systematic coaching for CDS, AFCAT, CAPF, SSC GD, and state police recruitment with regular mock tests and doubt resolution.',
     icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
         <polyline points="14 2 14 8 20 8"></polyline>
         <line x1="16" y1="13" x2="8" y2="13"></line>
         <line x1="16" y1="17" x2="8" y2="17"></line>
-        <polyline points="10 9 9 9 8 9"></polyline>
       </svg>
     )
   },
@@ -45,7 +44,7 @@ const DEFENCE_APPROACHES = [
     title: 'SSB Orientation',
     desc: 'Personalized mentoring for Service Selection Board (SSB) interviews, Stage-I Screening, Psychology tests, GTO tasks, and personal interview drills.',
     icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
         <circle cx="9" cy="7" r="4"></circle>
         <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -58,7 +57,7 @@ const DEFENCE_APPROACHES = [
     title: 'Physical Fitness',
     desc: 'Structured daily conditioning, endurance drills, obstacle course navigation, stamina building, and physical efficiency assessments.',
     icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
         <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
         <path d="M4 22h16"></path>
@@ -73,24 +72,27 @@ const DEFENCE_APPROACHES = [
     title: 'Personality Development',
     desc: 'Cultivating Officer-Like Qualities (OLQs), communication fluency, situational decision-making, and emotional intelligence under pressure.',
     icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10"></circle>
         <path d="M12 16v-4"></path>
         <path d="M12 8h.01"></path>
       </svg>
     )
-  },
-  {
-    num: '07',
-    title: 'Discipline & Leadership',
-    desc: 'Instilling regimental discipline, time management, military drill decorum, teamwork, and an unwavering commitment to serve the nation.',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-      </svg>
-    )
   }
 ];
+
+// Capstone 7th Pillar (Full-Width Foundation)
+const CAPSTONE_PILLAR = {
+  num: '07',
+  tag: 'CORE FOUNDATION',
+  title: 'Discipline & Leadership',
+  desc: 'Instilling regimental discipline, time management, military drill decorum, teamwork, and an unwavering commitment to serve the nation with honor and pride.',
+  icon: (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+    </svg>
+  )
+};
 
 // 5 Defence Facilities
 const DEFENCE_FACILITIES = [
@@ -240,7 +242,7 @@ export default function DefenseAcademyAbout() {
         </div>
       </section>
 
-      {/* 4. Core Training Approach (The 7 Pillars) */}
+      {/* 4. Core Training Approach (6 Cards + 1 Full-Width Capstone) */}
       <section className="defense-page-section alt-bg">
         <div className="defense-page-container">
           <div className="defense-section-header">
@@ -252,16 +254,31 @@ export default function DefenseAcademyAbout() {
           </div>
 
           <div className="defense-approach-grid">
-            {DEFENCE_APPROACHES.map((item) => (
+            {CORE_PILLARS.map((item) => (
               <div key={item.num} className="defense-approach-card">
-                <div className="defense-approach-header">
-                  <span className="defense-approach-num">{item.num}</span>
+                <div className="defense-card-top-bar">
                   <div className="defense-approach-icon">{item.icon}</div>
+                  <span className="defense-pillar-num">{item.num}</span>
                 </div>
                 <h3 className="defense-approach-title">{item.title}</h3>
                 <p className="defense-approach-desc">{item.desc}</p>
               </div>
             ))}
+          </div>
+
+          {/* Capstone 7th Pillar Banner */}
+          <div className="defense-capstone-card">
+            <div className="defense-capstone-icon-wrap">
+              {CAPSTONE_PILLAR.icon}
+            </div>
+            <div className="defense-capstone-content">
+              <div className="defense-capstone-badges">
+                <span className="defense-capstone-tag">{CAPSTONE_PILLAR.tag}</span>
+                <span className="defense-capstone-num">PILLAR {CAPSTONE_PILLAR.num}</span>
+              </div>
+              <h3 className="defense-capstone-title">{CAPSTONE_PILLAR.title}</h3>
+              <p className="defense-capstone-desc">{CAPSTONE_PILLAR.desc}</p>
+            </div>
           </div>
         </div>
       </section>
