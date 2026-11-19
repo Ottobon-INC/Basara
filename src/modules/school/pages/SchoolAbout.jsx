@@ -167,28 +167,42 @@ export default function SchoolAbout() {
             {/* Vision Card */}
             <div style={{
               background: 'linear-gradient(135deg, #302F7F 0%, #1e1b4b 100%)',
-              borderRadius: '12px',
-              padding: '32px 28px',
+              borderRadius: '16px',
+              padding: '36px 32px',
               color: '#ffffff',
-              borderLeft: '5px solid var(--color-accent, #B95308)',
+              borderLeft: '6px solid var(--color-accent, #B95308)',
               display: 'flex',
               flexDirection: 'column',
-              justifyContent: 'center'
+              justifyContent: 'center',
+              boxShadow: '0 8px 24px rgba(48, 47, 127, 0.18)'
             }}>
-              <span style={{
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '6px' }}>
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" strokeWidth="2.3" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <h3 style={{
+                  fontFamily: 'var(--font-heading, serif)',
+                  fontSize: '32px',
+                  fontWeight: 800,
+                  margin: 0,
+                  color: '#ffffff',
+                  letterSpacing: '0.01em'
+                }}>
+                  Our Vision
+                </h3>
+              </div>
+              <div style={{
                 color: '#fbbf24',
-                fontSize: '0.75rem',
-                fontWeight: 700,
-                textTransform: 'uppercase',
-                letterSpacing: '0.12em',
-                marginBottom: '8px'
+                fontSize: '1.1rem',
+                fontWeight: 600,
+                fontStyle: 'italic',
+                margin: '0 0 14px 0',
+                letterSpacing: '0.02em'
               }}>
-                Our Vision
-              </span>
-              <h3 style={{ fontFamily: 'var(--font-heading, serif)', fontSize: '22px', fontWeight: 700, margin: '0 0 12px 0', color: '#fff' }}>
                 Inspire. Innovate. Lead.
-              </h3>
-              <p style={{ fontSize: '0.98rem', lineHeight: '1.65', color: '#f1f5f9', margin: 0 }}>
+              </div>
+              <p style={{ fontSize: '1.02rem', lineHeight: '1.7', color: '#f1f5f9', margin: 0 }}>
                 To develop Sri Basara Leads International School into a centre of excellence where every child is inspired to learn, empowered to innovate, encouraged to lead, and prepared to succeed in a rapidly changing world.
               </p>
             </div>
@@ -196,36 +210,51 @@ export default function SchoolAbout() {
             {/* Mission Card */}
             <div style={{
               background: '#ffffff',
-              borderRadius: '12px',
-              padding: '32px 28px',
+              borderRadius: '16px',
+              padding: '36px 32px',
               border: '1px solid #e2e8f0',
-              boxShadow: '0 4px 14px rgba(0, 0, 0, 0.04)',
+              borderLeft: '6px solid var(--color-primary, #302F7F)',
+              boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center'
             }}>
-              <span style={{
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '6px' }}>
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent, #B95308)" strokeWidth="2.3" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="6"></circle>
+                  <circle cx="12" cy="12" r="2"></circle>
+                </svg>
+                <h3 style={{
+                  fontFamily: 'var(--font-heading, serif)',
+                  fontSize: '32px',
+                  fontWeight: 800,
+                  margin: 0,
+                  color: 'var(--color-primary, #302F7F)',
+                  letterSpacing: '0.01em'
+                }}>
+                  Our Mission
+                </h3>
+              </div>
+              <div style={{
                 color: 'var(--color-accent, #B95308)',
-                fontSize: '0.75rem',
-                fontWeight: 700,
-                textTransform: 'uppercase',
-                letterSpacing: '0.12em',
-                marginBottom: '8px'
+                fontSize: '1.1rem',
+                fontWeight: 600,
+                fontStyle: 'italic',
+                margin: '0 0 14px 0',
+                letterSpacing: '0.02em'
               }}>
-                Our Mission
-              </span>
-              <h3 style={{ fontFamily: 'var(--font-heading, serif)', fontSize: '22px', fontWeight: 700, margin: '0 0 12px 0', color: 'var(--color-primary, #302F7F)' }}>
                 Holistic Growth for Every Learner
-              </h3>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              </div>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '11px' }}>
                 {[
                   'Child-centred, activity-based learning from Nursery to Grade X',
                   'Integration of AI, Robotics, Coding, and Makers Space STEM education',
                   'Early IIT-JEE & NEET analytical foundation and mental ability',
                   'Discipline, leadership, moral values, and sportsmanship'
                 ].map((item, idx) => (
-                  <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.93rem', color: '#334155' }}>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent, #B95308)" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+                  <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.96rem', color: '#334155', lineHeight: '1.5' }}>
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent, #B95308)" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
                       <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                     <span>{item}</span>
