@@ -3,132 +3,138 @@
 /* Hero Section */
 .inst-hero {
   position: relative;
-  min-height: calc(100vh - 240px);
+  min-height: calc(100vh - 200px);
   display: flex;
   align-items: center;
   background-color: var(--color-background);
   overflow: hidden;
-  padding: 4rem 0;
+  padding: 3.5rem 0 4rem 0;
 }
 
 .inst-hero-grid {
   display: grid;
-  grid-template-columns: 4fr 6fr; /* Give more space to the banner */
-  gap: 3rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
   align-items: center;
 }
 
 .inst-hero-content {
-  max-width: 650px;
+  max-width: 600px;
   position: relative;
   z-index: 2;
 }
 
 .inst-hero-tagline {
   color: var(--color-accent);
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.875rem;
-  margin-bottom: 1rem;
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+  margin-bottom: 0.85rem;
   display: block;
 }
 
 .inst-hero-title {
   color: var(--color-primary);
-  font-size: clamp(3rem, 5vw, 4.5rem);
-  line-height: 1.1;
-  margin-bottom: 1rem;
+  font-size: clamp(2.3rem, 3.8vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.18;
+  margin-bottom: 1.1rem;
+  letter-spacing: -0.01em;
 }
 
 .inst-hero-desc {
-  color: var(--color-muted);
-  font-size: 1.125rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+  color: #475569;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
 }
 
 .inst-hero-actions {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.25rem;
   align-items: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
 .inst-btn-outline {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 1rem 2.25rem;
+  padding: 0.85rem 1.85rem;
   background: transparent;
   color: var(--color-primary);
-  border: 1px solid var(--color-border);
-  border-radius: 4px;
-  font-weight: 600;
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  font-size: 0.88rem;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 .inst-btn-outline:hover {
-  background: var(--color-surface);
-  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: #ffffff;
 }
 
 .inst-hero-trust {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .inst-avatars {
   display: flex;
+  align-items: center;
 }
 
 .inst-avatar {
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  border: 3px solid var(--color-white);
-  margin-left: -15px;
-  background: var(--color-border);
+  border: 3px solid #ffffff;
+  margin-left: -12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 .inst-avatar:first-child { margin-left: 0; }
 
 .inst-trust-text {
-  font-size: 0.95rem;
-  color: var(--color-text);
-  line-height: 1.4;
+  font-size: 0.92rem;
+  color: #334155;
+  line-height: 1.45;
 }
 
 /* Carousel Wrapper */
 .inst-hero-carousel-wrapper {
   position: relative;
   width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
 }
-
 
 .inst-hero-carousel-container {
   position: relative;
-  height: 100%;
-  max-width: 100%;
-  aspect-ratio: 4 / 3; /* Changed from 16/10 to 4/3 to make it taller and larger */
+  width: 100%;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
-  border-radius: 8px; /* Slightly rounded edges for the square look */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  background: var(--color-primary, #0a1d37);
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .inst-hero-carousel-img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: right center;
+  object-fit: cover !important;
+  object-position: center;
 }
 
 /* Carousel Navigation Arrows */
@@ -137,51 +143,56 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  border: 2px solid rgba(255,255,255,0.6);
-  background: rgba(0,0,0,0.35);
-  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.45);
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
   backdrop-filter: blur(4px);
 }
 .inst-hero-carousel-arrow:hover {
-  background: rgba(0,0,0,0.6);
-  border-color: #fff;
-  transform: translateY(-50%) scale(1.08);
+  background: rgba(0, 0, 0, 0.8);
+  border-color: #ffffff;
+  transform: translateY(-50%) scale(1.1);
 }
-.inst-hero-carousel-arrow.prev { left: 16px; }
-.inst-hero-carousel-arrow.next { right: 16px; }
+.inst-hero-carousel-arrow.prev { left: 14px; }
+.inst-hero-carousel-arrow.next { right: 14px; }
 
 /* Carousel Dots */
 .inst-hero-carousel-dots {
   position: absolute;
-  bottom: 20px;
+  bottom: 14px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 7px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 5px 12px;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
 }
 .inst-hero-carousel-dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  border: 2px solid rgba(255,255,255,0.7);
-  background: transparent;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
   padding: 0;
 }
 .inst-hero-carousel-dot.active {
-  background: #fff;
-  border-color: #fff;
-  transform: scale(1.2);
+  width: 22px;
+  border-radius: 10px;
+  background: #ffffff;
 }
 
 /* Background Video Styles (When video is present) */

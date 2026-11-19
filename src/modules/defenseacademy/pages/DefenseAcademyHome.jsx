@@ -9,8 +9,10 @@ export default function DefenseAcademyHome() {
   return (
     <div className="theme-defense">
       <InstitutionHero
-        tagline="Sri Basara Educational Institutions"
-        title="Sri Basara Defense Academy"
+        id="defenseacademy"
+        theme="da"
+        tagline="Discover Potential. Develop Valour. Lead with Honour."
+        title="Sri Basara Defence Academy"
         description="Rigorous physical training combined with exceptional academic coaching to forge the nation's future defenders."
         image={[
           "/assets/defenseacademy/basara defense train.png",
@@ -29,7 +31,7 @@ export default function DefenseAcademyHome() {
           { icon: 'Users', value: '500+', label: 'Cadets Trained' },
           { icon: 'Shield', value: '95%+', label: 'Selection Success Rate' },
           { icon: 'Star', value: '20+', label: 'Expert Trainers' },
-          { icon: 'Trophy', value: '', label: 'Years of Excellence In Defense Training' },
+          { icon: 'Trophy', value: '10+', label: 'Years of Excellence In Defense Training' },
         ]}
       />
 
@@ -71,8 +73,9 @@ export default function DefenseAcademyHome() {
 
       <FeatureCards
         id="about"
-        title="Why Choose Us Building Future Defenders"
-        description=""
+        tagline="WHY CHOOSE US"
+        title="Building the Nation's Future Defenders"
+        description="Dedicated military discipline, professional physical conditioning, and structured exam preparation."
         features={[
           {
             icon: 'User',
@@ -104,7 +107,7 @@ export default function DefenseAcademyHome() {
 
       <AdmissionsBanner
         id="admissions"
-        title="Admissions Open for 2025–26"
+        title="Admissions Open for 2026–27"
         description="Start your journey to serve the nation with pride."
         ctaText="Enquire Now"
         ctaHref="#admissions"

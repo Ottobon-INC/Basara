@@ -17,7 +17,7 @@ const Icons = {
   GraduationCap: () => <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
 };
 
-export const InstitutionHero = ({ id, title, description, tagline, image, video, ctaText, ctaHref, secondaryCtaText, secondaryCtaHref, trustText }) => {
+export const InstitutionHero = ({ id, title, description, tagline, image, video, ctaText, ctaHref, secondaryCtaText, secondaryCtaHref, trustText, theme }) => {
   const images = image ? (Array.isArray(image) ? image : [image]) : [];
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
 
@@ -63,7 +63,7 @@ export const InstitutionHero = ({ id, title, description, tagline, image, video,
                 <h1 className="inst-hero-title">{title}</h1>
                 <p className="inst-hero-desc">{description}</p>
                 <div className="inst-hero-actions">
-                  <Button variant="primary" theme="school" href={ctaHref}>{ctaText}</Button>
+                  <Button variant="primary" theme={theme || (id === 'defenseacademy' || id === 'da' ? 'da' : 'school')} href={ctaHref}>{ctaText}</Button>
                   {secondaryCtaText && (
                     secondaryCtaHref.startsWith('#') ? (
                       <a href={secondaryCtaHref} className="inst-btn-outline">
@@ -78,9 +78,15 @@ export const InstitutionHero = ({ id, title, description, tagline, image, video,
                 </div>
                 <div className="inst-hero-trust">
                   <div className="inst-avatars">
-                    <div className="inst-avatar" style={{backgroundImage: 'url(/assets/faces/face1.jpg)', backgroundSize: 'cover'}}></div>
-                    <div className="inst-avatar" style={{backgroundImage: 'url(/assets/faces/face2.jpg)', backgroundSize: 'cover'}}></div>
-                    <div className="inst-avatar" style={{backgroundImage: 'url(/assets/faces/face3.jpg)', backgroundSize: 'cover'}}></div>
+                    <div className="inst-avatar" style={{ background: 'linear-gradient(135deg, #14532d 0%, #064e3b 100%)', color: '#fbbf24' }}>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <div className="inst-avatar" style={{ background: 'linear-gradient(135deg, #ea580c 0%, #c2410c 100%)', color: '#ffffff' }}>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
+                    <div className="inst-avatar" style={{ background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)', color: '#38bdf8' }}>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                    </div>
                   </div>
                   <div className="inst-trust-text" dangerouslySetInnerHTML={{__html: trustText}}></div>
                 </div>
