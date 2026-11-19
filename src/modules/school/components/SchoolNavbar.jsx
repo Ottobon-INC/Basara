@@ -6,10 +6,10 @@ const SCHOOL_NAV_LINKS = [
   { label: 'Home', path: '/school', end: true },
   { label: 'About Us', path: '/school/about', end: false },
   { label: 'Courses', path: '/school/courses', end: false },
-  { label: 'Admissions', path: '/school/admissions', end: false },
   { label: 'Facilities', path: '/school/facilities', end: false },
   { label: 'Faculty', path: '/school/faculty', end: false },
   { label: 'Gallery', path: '/school/gallery', end: false },
+  { label: 'Admissions', path: '/school/admissions', end: false },
   { label: 'Contact Us', path: '/school/contact', end: false }
 ];
 
