@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
+import { useEnquiryModal } from '../../common/context/EnquiryModalContext';
 import './DefenseAcademyNavbar.css';
 
 const DA_NAV_LINKS = [
@@ -16,9 +17,9 @@ const DA_NAV_LINKS = [
 
 export default function DefenseAcademyNavbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [institutionsOpen, setInstitutionsOpen] = useState(false);
   const location = useLocation();
   const toggleBtnRef = useRef(null);
+  const { openEnquiryModal } = useEnquiryModal();
 
   // Close mobile drawer on route change
   useEffect(() => {
@@ -109,30 +110,19 @@ export default function DefenseAcademyNavbar() {
                   </NavLink>
                 </li>
               ))}
-
-              {/* Institutions Quick Switcher Dropdown */}
-              <li className="da-nav-dropdown">
-                <button type="button" className="da-nav-item-link da-nav-dropdown-btn">
-                  <span>Institutions</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
-                <div className="da-nav-dropdown-menu">
-                  <Link to="/" className="da-nav-dropdown-item">🏛️ Sri Basara Main Hub</Link>
-                  <Link to="/school" className="da-nav-dropdown-item">🎓 Leads International School</Link>
-                  <Link to="/juniorcollege" className="da-nav-dropdown-item">🔬 Junior College</Link>
-                  <Link to="/degree" className="da-nav-dropdown-item">📖 Degree College</Link>
-                </div>
-              </li>
             </ul>
           </nav>
 
           {/* Right Action CTA & Mobile Hamburger */}
           <div className="da-header-actions">
-            <Link to="/defenseacademy/admissions" className="da-apply-btn">
-              APPLY NOW
-            </Link>
+            <button 
+              type="button" 
+              className="da-apply-btn" 
+              onClick={() => openEnquiryModal('Sri Basara Defence Academy')}
+              style={{ border: 'none', cursor: 'pointer' }}
+            >
+              ENQUIRE NOW
+            </button>
 
             <button
               type="button"
@@ -196,57 +186,15 @@ export default function DefenseAcademyNavbar() {
               </NavLink>
             </li>
 
-            {/* Institutions Accordion in Mobile */}
             <li>
-              <button 
-                type="button" 
-                className="da-mobile-nav-link" 
-                style={{ width: '100%', justifyContent: 'space-between', border: 'none', background: 'none', cursor: 'pointer', textAlign: 'left', font: 'inherit' }}
-                onClick={() => setInstitutionsOpen(!institutionsOpen)}
+              <NavLink 
+                to="/defenseacademy/about" 
+                className={({ isActive }) => `da-mobile-nav-link ${isActive ? 'active' : ''}`}
+                onClick={() => setMobileMenuOpen(false)}
               >
-                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '12px' }}>
-                  <span className="da-mobile-icon">🏫</span>
-                  <span>Institutions</span>
-                </span>
-                <svg 
-                  width="16" 
-                  height="16" 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round"
-                  style={{ transform: institutionsOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s ease' }}
-                >
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </button>
-              {institutionsOpen && (
-                <div className="da-mobile-institutions-box">
-                  <div className="da-mobile-institutions-title">Basara Group of Institutions</div>
-                  <Link to="/" className="da-mobile-inst-item" onClick={() => setMobileMenuOpen(false)}>
-                    <span>🏛️</span>
-                    <span>Main Hub</span>
-                  </Link>
-                  <Link to="/school" className="da-mobile-inst-item" onClick={() => setMobileMenuOpen(false)}>
-                    <span>🎓</span>
-                    <span>Leads International School</span>
-                  </Link>
-                  <Link to="/juniorcollege" className="da-mobile-inst-item" onClick={() => setMobileMenuOpen(false)}>
-                    <span>🔬</span>
-                    <span>Junior College</span>
-                  </Link>
-                  <Link to="/degree" className="da-mobile-inst-item" onClick={() => setMobileMenuOpen(false)}>
-                    <span>📖</span>
-                    <span>Degree College</span>
-                  </Link>
-                  <Link to="/defenseacademy" className="da-mobile-inst-item" style={{ color: 'var(--da-nav-green)', fontWeight: 700 }} onClick={() => setMobileMenuOpen(false)}>
-                    <span>🎖️</span>
-                    <span>Defence Academy (Current)</span>
-                  </Link>
-                </div>
-              )}
+                <span className="da-mobile-icon">🏛️</span>
+                <span>About Us</span>
+              </NavLink>
             </li>
 
             <li>
@@ -317,13 +265,17 @@ export default function DefenseAcademyNavbar() {
           </ul>
 
           <div className="da-mobile-actions">
-            <Link 
-              to="/defenseacademy/admissions" 
+            <button 
+              type="button" 
               className="da-mobile-apply-btn"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={() => {
+                setMobileMenuOpen(false);
+                openEnquiryModal('Sri Basara Defence Academy');
+              }}
+              style={{ border: 'none', cursor: 'pointer', width: '100%' }}
             >
-              APPLY NOW
-            </Link>
+              ENQUIRE NOW
+            </button>
 
             <Link 
               to="/" 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
+import { useEnquiryModal } from '../../common/context/EnquiryModalContext';
 import './SchoolNavbar.css';
 
 const SCHOOL_NAV_LINKS = [
@@ -15,9 +16,9 @@ const SCHOOL_NAV_LINKS = [
 
 export default function SchoolNavbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [institutionsOpen, setInstitutionsOpen] = useState(false);
   const location = useLocation();
   const toggleBtnRef = useRef(null);
+  const { openEnquiryModal } = useEnquiryModal();
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -113,9 +114,14 @@ export default function SchoolNavbar() {
 
           {/* Right Action CTA & Mobile Hamburger */}
           <div className="school-header-actions">
-            <Link to="/school/admissions" className="school-apply-btn">
-              APPLY NOW
-            </Link>
+            <button 
+              type="button" 
+              className="school-apply-btn" 
+              onClick={() => openEnquiryModal('Sri Basara Leads International School')}
+              style={{ border: 'none', cursor: 'pointer' }}
+            >
+              ENQUIRE NOW
+            </button>
 
             <button
               type="button"
@@ -179,59 +185,6 @@ export default function SchoolNavbar() {
               </NavLink>
             </li>
 
-            {/* Institutions Accordion */}
-            <li>
-              <button 
-                type="button" 
-                className="school-mobile-nav-link" 
-                style={{ width: '100%', justifyContent: 'space-between', border: 'none', background: 'none', cursor: 'pointer', textAlign: 'left', font: 'inherit' }}
-                onClick={() => setInstitutionsOpen(!institutionsOpen)}
-              >
-                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '10px' }}>
-                  <span style={{ fontSize: '1.2rem', width: '24px' }}>🏫</span>
-                  <span>Institutions</span>
-                </span>
-                <svg 
-                  width="16" 
-                  height="16" 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round"
-                  style={{ transform: institutionsOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s ease' }}
-                >
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </button>
-              {institutionsOpen && (
-                <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '8px', padding: '0.5rem', marginTop: '4px' }}>
-                  <div style={{ fontSize: '0.75rem', fontWeight: 800, color: '#64748b', textTransform: 'uppercase', padding: '4px 8px' }}>Sri Basara Group</div>
-                  <Link to="/" style={{ display: 'flex', gap: '8px', padding: '6px 8px', textDecoration: 'none', color: '#334155', fontSize: '0.88rem', fontWeight: 600 }} onClick={() => setMobileMenuOpen(false)}>
-                    <span>🏛️</span>
-                    <span>Main Hub</span>
-                  </Link>
-                  <Link to="/school" style={{ display: 'flex', gap: '8px', padding: '6px 8px', textDecoration: 'none', color: '#302F7F', fontSize: '0.88rem', fontWeight: 700 }} onClick={() => setMobileMenuOpen(false)}>
-                    <span>🎓</span>
-                    <span>Leads International School (Current)</span>
-                  </Link>
-                  <Link to="/juniorcollege" style={{ display: 'flex', gap: '8px', padding: '6px 8px', textDecoration: 'none', color: '#334155', fontSize: '0.88rem', fontWeight: 600 }} onClick={() => setMobileMenuOpen(false)}>
-                    <span>🔬</span>
-                    <span>Junior College</span>
-                  </Link>
-                  <Link to="/degree" style={{ display: 'flex', gap: '8px', padding: '6px 8px', textDecoration: 'none', color: '#334155', fontSize: '0.88rem', fontWeight: 600 }} onClick={() => setMobileMenuOpen(false)}>
-                    <span>📖</span>
-                    <span>Degree College</span>
-                  </Link>
-                  <Link to="/defenseacademy" style={{ display: 'flex', gap: '8px', padding: '6px 8px', textDecoration: 'none', color: '#334155', fontSize: '0.88rem', fontWeight: 600 }} onClick={() => setMobileMenuOpen(false)}>
-                    <span>🎖️</span>
-                    <span>Defence Academy</span>
-                  </Link>
-                </div>
-              )}
-            </li>
-
             {SCHOOL_NAV_LINKS.filter(l => l.path !== '/school').map((link) => (
               <li key={link.path}>
                 <NavLink
@@ -250,13 +203,17 @@ export default function SchoolNavbar() {
           </ul>
 
           <div className="school-mobile-actions">
-            <Link 
-              to="/school/admissions" 
+            <button 
+              type="button" 
               className="school-mobile-apply-btn"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={() => {
+                setMobileMenuOpen(false);
+                openEnquiryModal('Sri Basara Leads International School');
+              }}
+              style={{ border: 'none', cursor: 'pointer', width: '100%' }}
             >
-              APPLY NOW
-            </Link>
+              ENQUIRE NOW
+            </button>
 
             <Link 
               to="/" 

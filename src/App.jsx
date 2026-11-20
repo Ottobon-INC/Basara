@@ -36,12 +36,16 @@ import DefenseAcademyAdmissions from './modules/defenseacademy/pages/DefenseAcad
 import DefenseAcademyGallery from './modules/defenseacademy/pages/DefenseAcademyGallery';
 import DefenseAcademyTransport from './modules/defenseacademy/pages/DefenseAcademyTransport';
 import DefenseAcademyContact from './modules/defenseacademy/pages/DefenseAcademyContact';
+import { EnquiryModalProvider } from './modules/common/context/EnquiryModalContext';
+import AdmissionEnquiryModal from './modules/common/components/AdmissionEnquiryModal';
 
 function App() {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <Routes>
+    <EnquiryModalProvider>
+      <BrowserRouter>
+        <ScrollToTop />
+        <AdmissionEnquiryModal />
+        <Routes>
         <Route path="/" element={<InstitutionLayout institutionId="umbrella" />}>
           <Route index element={<UmbrellaHome />} />
           <Route path="about" element={<UmbrellaAbout />} />
@@ -87,6 +91,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+  </EnquiryModalProvider>
   );
 }
 

@@ -4,11 +4,13 @@ import Container from '../Container';
 import DesktopNav from './DesktopNav';
 import MobileNav from './MobileNav';
 import Button from '../Button';
+import { useEnquiryModal } from '../../context/EnquiryModalContext';
 import './Header.css';
 
 export default function Header({ institutionConfig, navigationLinks }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const toggleBtnRef = useRef(null);
+  const { openEnquiryModal } = useEnquiryModal();
 
   const handleMobileMenuClose = () => {
     setMobileMenuOpen(false);
@@ -62,7 +64,10 @@ export default function Header({ institutionConfig, navigationLinks }) {
               <Button 
                 variant="primary" 
                 theme={institutionConfig.theme}
-                href={institutionConfig.id === 'degree' ? `/${institutionConfig.id}/admissions` : `/${institutionConfig.id}#admissions`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  openEnquiryModal(institutionConfig.name);
+                }}
               >
                 {institutionConfig.id === 'degree' ? 'Apply Now' : 'Enquire Now'}
               </Button>

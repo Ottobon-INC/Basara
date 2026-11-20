@@ -1,7 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './SchoolAdmissionsEnquiry.css';
 
 export default function SchoolAdmissionsEnquiry() {
+  const [sameAsMobile, setSameAsMobile] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    studentName: '',
+    parentName: '',
+    mobile: '',
+    whatsapp: '',
+    courseGrade: '',
+    institution: 'Sri Basara Leads International School',
+    previousSchool: '',
+    location: '',
+    preferredProgramme: 'Day Scholar',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => {
+      const updated = { ...prev, [name]: value };
+      if (name === 'mobile' && sameAsMobile) {
+        updated.whatsapp = value;
+      }
+      return updated;
+    });
+  };
+
+  const handleSameToggle = (e) => {
+    const checked = e.target.checked;
+    setSameAsMobile(checked);
+    if (checked) {
+      setFormData((prev) => ({ ...prev, whatsapp: prev.mobile }));
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitted(true);
+  };
+
   return (
     <section id="admissions" className="school-admissions-hub-section">
       <div className="school-admissions-hub-container">
@@ -22,7 +61,7 @@ export default function SchoolAdmissionsEnquiry() {
                 </div>
                 <div className="school-contact-details">
                   <span className="school-contact-label">Call Us</span>
-                  <span className="school-contact-value"><a href="tel:08933222888">08933-222888</a></span>
+                  <span className="school-contact-value"><a href="tel:9985577636">9985577636</a></span>
                 </div>
               </li>
               <li>
@@ -53,52 +92,191 @@ export default function SchoolAdmissionsEnquiry() {
 
         {/* Right Column: The Form */}
         <div className="school-admissions-form-panel">
-          <form action="https://sribasara.in/mail.php" method="post" className="school-admissions-form-wrapper">
-            <div className="school-admissions-form-title">
-              <h2>Admissions Enquiry</h2>
-              <p>Please provide your details below and our team will be in touch.</p>
+          {submitted ? (
+            <div style={{ textAlign: 'center', padding: '40px 24px', background: '#ffffff', borderRadius: '12px', border: '1px solid #86efac', boxShadow: '0 4px 18px rgba(0,0,0,0.06)' }}>
+              <div style={{ fontSize: '2.8rem', color: '#16a34a', marginBottom: '12px' }}>✓</div>
+              <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#15803d', margin: '0 0 10px 0' }}>Enquiry Received!</h3>
+              <p style={{ color: '#475569', fontSize: '0.96rem', maxWidth: '480px', margin: '0 auto 20px auto', lineHeight: 1.6 }}>
+                Thank you, <strong>{formData.parentName || formData.studentName}</strong>. Your enquiry for <strong>{formData.studentName}</strong> ({formData.courseGrade}) at {formData.institution} has been submitted. Our admissions coordinator will reach out shortly at <strong>{formData.mobile}</strong>.
+              </p>
+              <button 
+                type="button" 
+                onClick={() => setSubmitted(false)}
+                className="school-btn-submit-enquiry"
+                style={{ background: '#302F7F', cursor: 'pointer' }}
+              >
+                Submit Another Enquiry
+              </button>
             </div>
-            
-            <fieldset className="school-form-group">
-              <legend>Personal Information</legend>
-              <div className="school-form-row-split">
-                <div className="school-form-field">
-                  <label htmlFor="name" className="school-form-label">Full Name<span className="school-required-asterisk">*</span></label>
-                  <input type="text" id="name" name="name" className="school-form-input" required />
-                </div>
-                <div className="school-form-field">
-                  <label htmlFor="mobile" className="school-form-label">Mobile Number<span className="school-required-asterisk">*</span></label>
-                  <input type="tel" id="mobile" name="mobile" className="school-form-input" required />
-                </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="school-admissions-form-wrapper">
+              <div className="school-admissions-form-title">
+                <h2>Admissions Enquiry Form</h2>
+                <p>Please provide your details below and our team will be in touch.</p>
               </div>
-              <div className="school-form-field">
-                <label htmlFor="email" className="school-form-label">Email Address<span className="school-required-asterisk">*</span></label>
-                <input type="email" id="email" name="email" className="school-form-input" required />
-              </div>
-            </fieldset>
+              
+              <fieldset className="school-form-group">
+                <legend>Student & Parent Details</legend>
+                <div className="school-form-row-split">
+                  <div className="school-form-field">
+                    <label className="school-form-label">Student Name<span className="school-required-asterisk">*</span></label>
+                    <input 
+                      type="text" 
+                      name="studentName" 
+                      className="school-form-input" 
+                      required 
+                      value={formData.studentName}
+                      onChange={handleChange}
+                      placeholder="Enter student's full name"
+                    />
+                  </div>
+                  <div className="school-form-field">
+                    <label className="school-form-label">Parent Name<span className="school-required-asterisk">*</span></label>
+                    <input 
+                      type="text" 
+                      name="parentName" 
+                      className="school-form-input" 
+                      required 
+                      value={formData.parentName}
+                      onChange={handleChange}
+                      placeholder="Enter parent's full name"
+                    />
+                  </div>
+                </div>
 
-            <fieldset className="school-form-group">
-              <legend>Enquiry Details</legend>
-              <div className="school-form-row-split">
-                <div className="school-form-field">
-                  <label htmlFor="subject" className="school-form-label">Grade / Class Applying For<span className="school-required-asterisk">*</span></label>
-                  <input type="text" id="subject" name="subject" className="school-form-input" required />
+                <div className="school-form-row-split">
+                  <div className="school-form-field">
+                    <label className="school-form-label">Mobile Number<span className="school-required-asterisk">*</span></label>
+                    <input 
+                      type="tel" 
+                      name="mobile" 
+                      className="school-form-input" 
+                      required 
+                      pattern="[0-9]{10}"
+                      maxLength="10"
+                      value={formData.mobile}
+                      onChange={handleChange}
+                      placeholder="10-digit mobile number"
+                    />
+                  </div>
+                  <div className="school-form-field">
+                    <label className="school-form-label" style={{ display: 'flex', justifyContent: 'space-between' }}>
+                      <span>WhatsApp Number</span>
+                      <span style={{ fontSize: '0.74rem', color: '#16a34a', cursor: 'pointer' }}>
+                        <input type="checkbox" checked={sameAsMobile} onChange={handleSameToggle} style={{ marginRight: '4px' }} />
+                        Same as mobile
+                      </span>
+                    </label>
+                    <input 
+                      type="tel" 
+                      name="whatsapp" 
+                      className="school-form-input" 
+                      disabled={sameAsMobile}
+                      pattern="[0-9]{10}"
+                      maxLength="10"
+                      value={formData.whatsapp}
+                      onChange={handleChange}
+                      placeholder="WhatsApp number"
+                    />
+                  </div>
                 </div>
-                <div className="school-form-field">
-                  <label htmlFor="experience" className="school-form-label">Previous School<span className="school-required-asterisk">*</span></label>
-                  <input type="text" id="experience" name="experience" className="school-form-input" required />
-                </div>
-              </div>
-              <div className="school-form-field">
-                <label htmlFor="message" className="school-form-label">Message<span className="school-required-asterisk">*</span></label>
-                <textarea id="message" name="message" className="school-form-input" required></textarea>
-              </div>
-            </fieldset>
+              </fieldset>
 
-            <div className="school-form-submit-wrapper">
-              <button type="submit" name="submit" className="school-btn-submit-enquiry">Submit Enquiry</button>
-            </div>
-          </form>
+              <fieldset className="school-form-group">
+                <legend>Course & Academic Information</legend>
+                <div className="school-form-row-split">
+                  <div className="school-form-field">
+                    <label className="school-form-label">Class / Course<span className="school-required-asterisk">*</span></label>
+                    <input 
+                      type="text" 
+                      name="courseGrade" 
+                      className="school-form-input" 
+                      required 
+                      value={formData.courseGrade}
+                      onChange={handleChange}
+                      placeholder="e.g. Nursery, Grade 1 to 10"
+                    />
+                  </div>
+                  <div className="school-form-field">
+                    <label className="school-form-label">Institution<span className="school-required-asterisk">*</span></label>
+                    <select 
+                      name="institution" 
+                      className="school-form-input" 
+                      required 
+                      value={formData.institution}
+                      onChange={handleChange}
+                    >
+                      <option value="Sri Basara Leads International School">Sri Basara Leads International School</option>
+                      <option value="Sri Basara Junior College">Sri Basara Junior College</option>
+                      <option value="Sri Basara Degree College">Sri Basara Degree College</option>
+                      <option value="Sri Basara Defence Academy">Sri Basara Defence Academy</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div className="school-form-row-split">
+                  <div className="school-form-field">
+                    <label className="school-form-label">Previous School / College</label>
+                    <input 
+                      type="text" 
+                      name="previousSchool" 
+                      className="school-form-input" 
+                      value={formData.previousSchool}
+                      onChange={handleChange}
+                      placeholder="Current or previous school name"
+                    />
+                  </div>
+                  <div className="school-form-field">
+                    <label className="school-form-label">Location / Town / Village<span className="school-required-asterisk">*</span></label>
+                    <input 
+                      type="text" 
+                      name="location" 
+                      className="school-form-input" 
+                      required 
+                      value={formData.location}
+                      onChange={handleChange}
+                      placeholder="e.g. Tagarapuvalasa, Bheemili, Vizag"
+                    />
+                  </div>
+                </div>
+
+                <div className="school-form-field">
+                  <label className="school-form-label">Preferred Programme<span className="school-required-asterisk">*</span></label>
+                  <select 
+                    name="preferredProgramme" 
+                    className="school-form-input" 
+                    required 
+                    value={formData.preferredProgramme}
+                    onChange={handleChange}
+                  >
+                    <option value="Day Scholar">Day Scholar</option>
+                    <option value="Semi-Residential">Semi-Residential</option>
+                    <option value="Residential / Hostel">Residential / Hostel</option>
+                    <option value="IIT-JEE & NEET Foundation">IIT-JEE & NEET Foundation</option>
+                    <option value="Other / General Enquiry">Other / General Enquiry</option>
+                  </select>
+                </div>
+
+                <div className="school-form-field">
+                  <label className="school-form-label">Message / Queries</label>
+                  <textarea 
+                    name="message" 
+                    className="school-form-input" 
+                    rows="3"
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Any specific questions regarding transport, curriculum, or timings..."
+                  />
+                </div>
+              </fieldset>
+
+              <div className="school-form-submit-wrapper">
+                <button type="submit" name="submit" className="school-btn-submit-enquiry">
+                  Submit Admission Enquiry
+                </button>
+              </div>
+            </form>
+          )}
         </div>
 
       </div>

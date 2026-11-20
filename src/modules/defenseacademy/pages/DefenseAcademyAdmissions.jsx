@@ -2,18 +2,38 @@ import React, { useState } from 'react';
 import './defense-pages.css';
 
 export default function DefenseAcademyAdmissions() {
+  const [sameAsMobile, setSameAsMobile] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    qualification: '',
-    targetExam: 'NDA (National Defence Academy)',
+    studentName: '',
+    parentName: '',
+    mobile: '',
+    whatsapp: '',
+    courseGrade: 'NDA (National Defence Academy)',
+    institution: 'Sri Basara Defence Academy',
+    previousSchool: '',
+    location: '',
+    preferredProgramme: 'Residential / Hostel Cadet',
     message: ''
   });
-  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData((prev) => {
+      const updated = { ...prev, [name]: value };
+      if (name === 'mobile' && sameAsMobile) {
+        updated.whatsapp = value;
+      }
+      return updated;
+    });
+  };
+
+  const handleSameToggle = (e) => {
+    const checked = e.target.checked;
+    setSameAsMobile(checked);
+    if (checked) {
+      setFormData((prev) => ({ ...prev, whatsapp: prev.mobile }));
+    }
   };
 
   const handleSubmit = (e) => {
@@ -75,9 +95,9 @@ export default function DefenseAcademyAdmissions() {
           </div>
 
           {/* Admission Enquiry Form */}
-          <div className="da-contact-card" style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <div className="da-contact-card" style={{ maxWidth: '820px', margin: '0 auto' }}>
             <div style={{ textAlign: 'center', marginBottom: '28px' }}>
-              <span className="da-section-subtitle">QUICK ADMISSION FORM</span>
+              <span className="da-section-subtitle">ADMISSION ENQUIRY FORM</span>
               <h2 style={{ fontFamily: 'Plus Jakarta Sans', fontSize: '1.8rem', fontWeight: 800, color: 'var(--color-primary, #15803d)', margin: '6px 0' }}>
                 Register Your Interest
               </h2>
@@ -90,90 +110,186 @@ export default function DefenseAcademyAdmissions() {
               <div style={{ textAlign: 'center', padding: '36px 20px', background: 'rgba(21, 128, 61, 0.08)', borderRadius: '12px', border: '1px solid #86efac' }}>
                 <div style={{ fontSize: '2.5rem', marginBottom: '10px' }}>✅</div>
                 <h3 style={{ fontSize: '1.3rem', color: '#15803d', fontWeight: 800, margin: '0 0 8px 0' }}>Enquiry Submitted Successfully!</h3>
-                <p style={{ color: '#334155', fontSize: '0.95rem', maxWidth: '500px', margin: '0 auto' }}>
-                  Thank you, <strong>{formData.name}</strong>. Our admissions counselor will contact you at <strong>{formData.phone}</strong> shortly.
+                <p style={{ color: '#334155', fontSize: '0.95rem', maxWidth: '500px', margin: '0 auto 18px auto' }}>
+                  Thank you, <strong>{formData.parentName || formData.studentName}</strong>. Your enquiry for <strong>{formData.studentName}</strong> ({formData.courseGrade}) at {formData.institution} has been received. Our admissions officer will contact you at <strong>{formData.mobile}</strong> shortly.
                 </p>
+                <button
+                  type="button"
+                  onClick={() => setSubmitted(false)}
+                  className="da-btn-primary"
+                  style={{ border: 'none', cursor: 'pointer' }}
+                >
+                  Submit Another Enquiry
+                </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '18px' }}>
+              <form onSubmit={handleSubmit} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                
+                {/* 1. Student Name */}
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                  <label style={{ fontSize: '0.88rem', fontWeight: 700, color: '#334155' }}>Full Name *</label>
+                  <label style={{ fontSize: '0.86rem', fontWeight: 700, color: '#334155' }}>
+                    Student Name <span style={{ color: '#dc2626' }}>*</span>
+                  </label>
                   <input
                     type="text"
-                    name="name"
+                    name="studentName"
                     required
-                    value={formData.name}
+                    value={formData.studentName}
                     onChange={handleChange}
-                    placeholder="Enter cadet's full name"
-                    style={{ padding: '10px 14px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '0.95rem' }}
+                    placeholder="Enter student's full name"
+                    style={{ padding: '10px 14px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '0.92rem' }}
                   />
                 </div>
 
+                {/* 2. Parent Name */}
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                  <label style={{ fontSize: '0.88rem', fontWeight: 700, color: '#334155' }}>Phone Number *</label>
+                  <label style={{ fontSize: '0.86rem', fontWeight: 700, color: '#334155' }}>
+                    Parent / Guardian Name <span style={{ color: '#dc2626' }}>*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="parentName"
+                    required
+                    value={formData.parentName}
+                    onChange={handleChange}
+                    placeholder="Enter parent's full name"
+                    style={{ padding: '10px 14px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '0.92rem' }}
+                  />
+                </div>
+
+                {/* 3. Mobile Number */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                  <label style={{ fontSize: '0.86rem', fontWeight: 700, color: '#334155' }}>
+                    Mobile Number <span style={{ color: '#dc2626' }}>*</span>
+                  </label>
                   <input
                     type="tel"
-                    name="phone"
+                    name="mobile"
                     required
-                    value={formData.phone}
+                    pattern="[0-9]{10}"
+                    maxLength="10"
+                    value={formData.mobile}
                     onChange={handleChange}
-                    placeholder="Enter 10-digit mobile number"
-                    style={{ padding: '10px 14px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '0.95rem' }}
+                    placeholder="10-digit mobile number"
+                    style={{ padding: '10px 14px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '0.92rem' }}
                   />
                 </div>
 
+                {/* 4. WhatsApp Number */}
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                  <label style={{ fontSize: '0.88rem', fontWeight: 700, color: '#334155' }}>Email Address</label>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <label style={{ fontSize: '0.86rem', fontWeight: 700, color: '#334155' }}>WhatsApp Number</label>
+                    <label style={{ fontSize: '0.74rem', color: '#16a34a', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                      <input type="checkbox" checked={sameAsMobile} onChange={handleSameToggle} />
+                      Same as mobile
+                    </label>
+                  </div>
                   <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
+                    type="tel"
+                    name="whatsapp"
+                    disabled={sameAsMobile}
+                    pattern="[0-9]{10}"
+                    maxLength="10"
+                    value={formData.whatsapp}
                     onChange={handleChange}
-                    placeholder="cadet@example.com"
-                    style={{ padding: '10px 14px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '0.95rem' }}
+                    placeholder="WhatsApp number"
+                    style={{ padding: '10px 14px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '0.92rem' }}
                   />
                 </div>
 
+                {/* 5. Class / Course */}
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                  <label style={{ fontSize: '0.88rem', fontWeight: 700, color: '#334155' }}>Target Exam / Program *</label>
-                  <select
-                    name="targetExam"
-                    value={formData.targetExam}
+                  <label style={{ fontSize: '0.86rem', fontWeight: 700, color: '#334155' }}>
+                    Class / Course <span style={{ color: '#dc2626' }}>*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="courseGrade"
+                    required
+                    value={formData.courseGrade}
                     onChange={handleChange}
-                    style={{ padding: '10px 14px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '0.95rem' }}
+                    placeholder="e.g. NDA, CDS, AFCAT, Coast Guard, Police"
+                    style={{ padding: '10px 14px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '0.92rem' }}
+                  />
+                </div>
+
+                {/* 6. Institution */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                  <label style={{ fontSize: '0.86rem', fontWeight: 700, color: '#334155' }}>
+                    Institution <span style={{ color: '#dc2626' }}>*</span>
+                  </label>
+                  <select
+                    name="institution"
+                    required
+                    value={formData.institution}
+                    onChange={handleChange}
+                    style={{ padding: '10px 14px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '0.92rem' }}
                   >
-                    <option value="NDA (National Defence Academy)">NDA (National Defence Academy)</option>
-                    <option value="CDS (Combined Defence Services)">CDS (Combined Defence Services)</option>
-                    <option value="AFCAT (Air Force Entry)">AFCAT (Air Force Entry)</option>
-                    <option value="Indian Coast Guard">Indian Coast Guard</option>
-                    <option value="Indian Army Agniveer">Indian Army Agniveer</option>
-                    <option value="Navy SSR / MR">Navy SSR / MR</option>
-                    <option value="SSC GD & Paramilitary">SSC GD & Paramilitary</option>
-                    <option value="State Police Recruitment">State Police Recruitment</option>
+                    <option value="Sri Basara Defence Academy">Sri Basara Defence Academy</option>
+                    <option value="Sri Basara Leads International School">Sri Basara Leads International School</option>
+                    <option value="Sri Basara Junior College">Sri Basara Junior College</option>
+                    <option value="Sri Basara Degree College">Sri Basara Degree College</option>
                   </select>
                 </div>
 
-                <div style={{ gridColumn: '1 / -1', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                  <label style={{ fontSize: '0.88rem', fontWeight: 700, color: '#334155' }}>Highest Educational Qualification</label>
+                {/* 7. Previous School / College */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                  <label style={{ fontSize: '0.86rem', fontWeight: 700, color: '#334155' }}>Previous School / College</label>
                   <input
                     type="text"
-                    name="qualification"
-                    value={formData.qualification}
+                    name="previousSchool"
+                    value={formData.previousSchool}
                     onChange={handleChange}
-                    placeholder="e.g. 10th Appearing / Intermediate MPC / Degree final year"
-                    style={{ padding: '10px 14px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '0.95rem' }}
+                    placeholder="Current or previous school/college"
+                    style={{ padding: '10px 14px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '0.92rem' }}
                   />
                 </div>
 
+                {/* 8. Location */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                  <label style={{ fontSize: '0.86rem', fontWeight: 700, color: '#334155' }}>
+                    Location / Town / Village <span style={{ color: '#dc2626' }}>*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="location"
+                    required
+                    value={formData.location}
+                    onChange={handleChange}
+                    placeholder="e.g. Tagarapuvalasa, Bheemili, Vizianagaram"
+                    style={{ padding: '10px 14px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '0.92rem' }}
+                  />
+                </div>
+
+                {/* 9. Preferred Programme */}
                 <div style={{ gridColumn: '1 / -1', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                  <label style={{ fontSize: '0.88rem', fontWeight: 700, color: '#334155' }}>Any Questions or Queries?</label>
+                  <label style={{ fontSize: '0.86rem', fontWeight: 700, color: '#334155' }}>
+                    Preferred Programme <span style={{ color: '#dc2626' }}>*</span>
+                  </label>
+                  <select
+                    name="preferredProgramme"
+                    required
+                    value={formData.preferredProgramme}
+                    onChange={handleChange}
+                    style={{ padding: '10px 14px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '0.92rem' }}
+                  >
+                    <option value="Residential / Hostel Cadet">Residential / Hostel Cadet (Boarding + Training)</option>
+                    <option value="Day Scholar Cadet">Day Scholar Cadet (Commuting)</option>
+                    <option value="Weekend Special Crash Course">Weekend Special Crash Course</option>
+                    <option value="SSB Interview Intensive Batch">SSB Interview Intensive Batch</option>
+                  </select>
+                </div>
+
+                {/* 10. Message */}
+                <div style={{ gridColumn: '1 / -1', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                  <label style={{ fontSize: '0.86rem', fontWeight: 700, color: '#334155' }}>Message / Queries</label>
                   <textarea
                     name="message"
                     rows="3"
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Tell us about your defence career goals or hostel inquiry..."
-                    style={{ padding: '10px 14px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '0.95rem' }}
+                    style={{ padding: '10px 14px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '0.92rem' }}
                   />
                 </div>
 

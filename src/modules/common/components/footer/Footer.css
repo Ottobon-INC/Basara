@@ -4,30 +4,31 @@
 .site-footer {
   background-color: var(--color-primary);
   color: var(--color-white);
-  padding: 1.75rem 0 0 0;
+  padding: 1.15rem 0 0 0;
   margin-top: auto;
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1.2fr;
+  grid-template-columns: 1.8fr 1.2fr 1.2fr;
   align-items: start;
-  gap: 1.5rem 2.5rem;
-  margin-bottom: 1.15rem;
+  gap: 1rem 2rem;
+  margin-bottom: 0.85rem;
 }
 
 .footer-logo {
-  max-width: 175px;
-  margin-bottom: 0.45rem;
+  max-width: 140px;
+  margin-bottom: 0.35rem;
   display: block;
 }
 
 .footer-brand p {
   color: var(--color-border);
-  font-size: 0.88rem;
-  line-height: 1.45;
+  font-size: 0.82rem;
+  line-height: 1.4;
   margin: 0;
-  max-width: 360px;
+  max-width: 340px;
+  opacity: 0.9;
 }
 
 .footer-title {
@@ -35,11 +36,11 @@
   font-family: var(--font-body);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  font-size: 0.92rem;
+  font-size: 0.84rem;
   font-weight: 700;
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.45rem;
   border-bottom: 2px solid var(--color-accent);
-  padding-bottom: 0.25rem;
+  padding-bottom: 0.2rem;
   display: inline-block;
 }
 
@@ -47,23 +48,28 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.25rem 0.75rem;
 }
 
 .footer-links li {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0;
 }
 
 .footer-links a {
   color: var(--color-border);
   transition: var(--transition);
-  font-size: 0.88rem;
+  font-size: 0.82rem;
   text-decoration: none;
+  opacity: 0.9;
 }
 
 .footer-links a:hover,
 .footer-links a.active {
   color: var(--color-white);
-  padding-left: 4px;
+  padding-left: 3px;
+  opacity: 1;
 }
 
 .footer-contact {
@@ -74,9 +80,10 @@
   color: var(--color-border);
   display: flex;
   align-items: flex-start;
-  font-size: 0.86rem;
-  line-height: 1.4;
-  margin-bottom: 0.45rem;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  margin-bottom: 0.35rem;
+  opacity: 0.9;
 }
 
 .footer-contact p:last-child {
@@ -85,18 +92,21 @@
 
 .footer-contact svg {
   color: var(--color-accent);
-  margin-top: 3px;
+  margin-top: 2px;
+  margin-right: 6px !important;
   flex-shrink: 0;
+  width: 14px;
+  height: 14px;
 }
 
 .footer-bottom {
-  padding: 0.75rem 0;
+  padding: 0.5rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: var(--color-border);
-  font-size: 0.8rem;
+  font-size: 0.76rem;
 }
 
 .footer-bottom-links {
@@ -130,74 +140,100 @@
 }
 
 /* ==========================================================================
-   COMPACT FOOTER OVERRIDES FOR SCHOOL
+   COMPACT FOOTER OVERRIDES FOR SCHOOL & DEFENCE ACADEMY
    ========================================================================== */
-.theme-school .site-footer {
-  padding: 1.75rem 0 0 0;
+.theme-school .site-footer,
+.theme-defense .site-footer,
+.theme-da .site-footer {
+  padding: 1.15rem 0 0 0;
 }
 
-.theme-school .footer-grid {
-  gap: 1.5rem 2.5rem;
-  margin-bottom: 1.15rem;
+.theme-school .footer-grid,
+.theme-defense .footer-grid,
+.theme-da .footer-grid {
+  gap: 1rem 2rem;
+  margin-bottom: 0.85rem;
 }
 
-.theme-school .footer-logo {
-  max-width: 170px;
-  margin-bottom: 0.45rem;
+.theme-school .footer-logo,
+.theme-defense .footer-logo,
+.theme-da .footer-logo {
+  max-width: 140px;
+  margin-bottom: 0.35rem;
 }
 
-.theme-school .footer-brand p {
-  font-size: 0.85rem;
-  line-height: 1.45;
+.theme-school .footer-brand p,
+.theme-defense .footer-brand p,
+.theme-da .footer-brand p {
+  font-size: 0.82rem;
+  line-height: 1.4;
   color: rgba(255, 255, 255, 0.85);
   margin: 0;
-  max-width: 380px;
+  max-width: 340px;
 }
 
-.theme-school .footer-title {
-  font-size: 0.92rem;
-  margin-bottom: 0.65rem;
-  padding-bottom: 0.25rem;
+.theme-school .footer-title,
+.theme-defense .footer-title,
+.theme-da .footer-title {
+  font-size: 0.84rem;
+  margin-bottom: 0.45rem;
+  padding-bottom: 0.2rem;
   letter-spacing: 0.06em;
 }
 
-.theme-school .footer-links {
+.theme-school .footer-links,
+.theme-defense .footer-links,
+.theme-da .footer-links {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.35rem 1rem;
+  gap: 0.25rem 0.85rem;
 }
 
-.theme-school .footer-links li {
+.theme-school .footer-links li,
+.theme-defense .footer-links li,
+.theme-da .footer-links li {
   margin-bottom: 0;
 }
 
-.theme-school .footer-links a {
-  font-size: 0.85rem;
+.theme-school .footer-links a,
+.theme-defense .footer-links a,
+.theme-da .footer-links a {
+  font-size: 0.82rem;
   color: rgba(255, 255, 255, 0.85);
 }
 
-.theme-school .footer-links a:hover {
+.theme-school .footer-links a:hover,
+.theme-defense .footer-links a:hover,
+.theme-da .footer-links a:hover {
   color: #ffffff;
 }
 
-.theme-school .footer-contact p {
-  font-size: 0.85rem;
-  margin-bottom: 0.45rem;
-  line-height: 1.4;
+.theme-school .footer-contact p,
+.theme-defense .footer-contact p,
+.theme-da .footer-contact p {
+  font-size: 0.82rem;
+  margin-bottom: 0.35rem;
+  line-height: 1.35;
   color: rgba(255, 255, 255, 0.85);
 }
 
-.theme-school .footer-bottom {
-  padding: 0.75rem 0;
-  font-size: 0.78rem;
+.theme-school .footer-bottom,
+.theme-defense .footer-bottom,
+.theme-da .footer-bottom {
+  padding: 0.5rem 0;
+  font-size: 0.76rem;
   color: rgba(255, 255, 255, 0.75);
 }
 
-.theme-school .footer-bottom-links {
+.theme-school .footer-bottom-links,
+.theme-defense .footer-bottom-links,
+.theme-da .footer-bottom-links {
   gap: 1rem;
 }
 
-.theme-school .footer-bottom-links a {
-  font-size: 0.78rem;
+.theme-school .footer-bottom-links a,
+.theme-defense .footer-bottom-links a,
+.theme-da .footer-bottom-links a {
+  font-size: 0.76rem;
   color: rgba(255, 255, 255, 0.75);
 }

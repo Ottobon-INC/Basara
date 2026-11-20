@@ -3,6 +3,7 @@ import Container from './Container';
 import Button from './Button';
 import './InstitutionComponents.css';
 import { Link } from 'react-router-dom';
+import { useEnquiryModal } from '../context/EnquiryModalContext';
 
 // SVG Icons for reuse
 const Icons = {
@@ -18,6 +19,7 @@ const Icons = {
 };
 
 export const InstitutionHero = ({ id, title, description, tagline, image, video, ctaText, ctaHref, secondaryCtaText, secondaryCtaHref, trustText, theme }) => {
+  const { openEnquiryModal } = useEnquiryModal();
   const images = image ? (Array.isArray(image) ? image : [image]) : [];
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
 
@@ -63,7 +65,19 @@ export const InstitutionHero = ({ id, title, description, tagline, image, video,
                 <h1 className="inst-hero-title">{title}</h1>
                 <p className="inst-hero-desc">{description}</p>
                 <div className="inst-hero-actions">
-                  <Button variant="primary" theme={theme || (id === 'defenseacademy' || id === 'da' ? 'da' : 'school')} href={ctaHref}>{ctaText}</Button>
+                  <Button 
+                    variant="primary" 
+                    theme={theme || (id === 'defenseacademy' || id === 'da' ? 'da' : 'school')} 
+                    href={ctaHref}
+                    onClick={(e) => {
+                      if (!ctaText || ctaText.toLowerCase().includes('enquire')) {
+                        e.preventDefault();
+                        openEnquiryModal(title);
+                      }
+                    }}
+                  >
+                    {ctaText}
+                  </Button>
                   {secondaryCtaText && (
                     secondaryCtaHref.startsWith('#') ? (
                       <a href={secondaryCtaHref} className="inst-btn-outline">
@@ -344,6 +358,7 @@ export const ProgramsGrid = ({ id, tagline, title, description, programs, ctaTex
 };
 
 export const AdmissionsBanner = ({ id, title, description, ctaText, ctaHref, bgImage }) => {
+  const { openEnquiryModal } = useEnquiryModal();
   const wrapperStyle = bgImage ? { backgroundImage: `url('${bgImage}')` } : {};
   return (
     <section id={id} className={`inst-banner-wrapper ${bgImage ? 'has-bg' : ''}`} style={wrapperStyle}>
@@ -358,15 +373,14 @@ export const AdmissionsBanner = ({ id, title, description, ctaText, ctaHref, bgI
               <p>{description}</p>
             </div>
           </div>
-          {ctaHref.startsWith('#') ? (
-            <a href={ctaHref} className="btn inst-btn-white theme-school">
-              {ctaText}
-            </a>
-          ) : (
-            <Link to={ctaHref} className="btn inst-btn-white theme-school">
-              {ctaText}
-            </Link>
-          )}
+          <button 
+            type="button" 
+            className="btn inst-btn-white theme-school"
+            onClick={() => openEnquiryModal(title)}
+            style={{ border: 'none', cursor: 'pointer' }}
+          >
+            {ctaText}
+          </button>
         </div>
       </Container>
     </section>
